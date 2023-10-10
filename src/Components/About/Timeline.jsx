@@ -63,7 +63,7 @@ export const Timeline = () => {
               Northeastern University
             </h4>
             <p data-aos="fade-right">
-              Pursuing Masters of Science in Business Analytics
+              Masters of Science in Business Analytics
             </p>
           </VerticalTimelineElement>
           <VerticalTimelineElement
@@ -98,7 +98,7 @@ export const Timeline = () => {
               KPMG India
             </h4>
             <p data-aos="fade-right">
-            As a Risk Analyst, I held a critical role in safeguarding our clients' interests by conducting meticulous proactive and reactive investigations. My primary mission was to detect and prevent fraud, ensuring the highest level of protection for our valued clients. My work involved employing analytical skills and a keen eye for detail to assess potential risks, analyze data, and develop strategies to mitigate them effectively. I thrived in a dynamic environment where staying one step ahead of potential threats was paramount. My dedication and commitment to upholding the integrity of our services were unwavering, making me an invaluable asset to the team.
+            As a Risk Analyst, I held a critical role in safeguarding our clients' interests by conducting meticulous proactive and reactive investigations. My primary mission was to detect and prevent fraud, ensuring the highest level of protection for our valued clients. My work involved employing analytical skills and a keen eye for detail to assess potential risks, analyze data, and develop strategies to mitigate them effectively.
             </p>
           </VerticalTimelineElement>
           <VerticalTimelineElement
