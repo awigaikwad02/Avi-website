@@ -42,9 +42,10 @@ export const About = () => {
         </h1>
         <Type />
         <p className="about__desc" data-aos="fade-right">
-        Passionate consulting and finance enthusiast with an experience in risk consulting. Have previously worked in 
-        financial services, consumer market Healthcare and other sectors. I am proficient in technical skills required for 
-        a professional.
+        I'm a passionate Business Analytics graduate student at Northeastern University, specializing in 
+transforming data into actionable insights. With experience in risk consulting across finance, 
+healthcare, and consumer markets, my ultimate goal is to utilize data to tell compelling stories and 
+drive innovation. Empowering Tomorrow's Business with Data-Driven Stories! 
         </p>
         <div className="about__contact center">
           {/* <a
@@ -88,7 +89,7 @@ export const About = () => {
           className="btnResume"
           onClick={() => {
             window.open(
-              "https://drive.google.com/file/d/1mg7e7oOyQOC-ogHuL6tT7kloy1cwcn_G/view?usp=sharing"
+              "https://drive.google.com/file/d/1gte6Iy175_b8LR86H0UsXNOvBCe25bPs/view?usp=sharing"
             );
           }}
         >

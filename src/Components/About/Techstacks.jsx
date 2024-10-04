@@ -8,8 +8,14 @@ import {
   SiPowerbi,
   SiR,
   SiPython,
-  SiMicrosoftpowerpoint
+  SiMicrosoftpowerpoint,
+  SiSnowflake,
+  SiDatabricks,
+  SiAlteryx,
+  SiAdobephotoshop 
 } from "react-icons/si";
+import { FaSalesforce } from "react-icons/fa";
+
 // import { DiCss3, DiMongodb } from "react-icons/di";
 // import { SiJavascript, SiHeroku, SiPhp, SiSwift} from "react-icons/si";
 // import { VscGithub } from "react-icons/vsc";
@@ -45,26 +51,38 @@ export const Techstacks = () => {
             <SiPython />
             <h5>Python</h5>
           </div>
-
-          
-
           <div>
             <SiMicrosoftpowerpoint />
             <h5>Power Point</h5>
           </div>
-          {/* <div>
-            <BsBootstrap />
-            <h5>Bootstrap</h5>
+
+
+          <div>
+            <FaSalesforce />
+            <h5>Salesforce</h5>
           </div>
           
           <div>
-            <SiSwift />
-            <h5>Swift</h5>
+          <SiDatabricks />
+            <h5>Databricks</h5>
           </div>
           <div>
-            <VscGithub />
-            <h5>Github</h5>
-          </div> */}
+            <SiSnowflake />
+            <h5>Snowflake</h5>
+          </div>
+
+          <div>
+            <SiAlteryx />
+            <h5>Alteryx</h5>
+          </div>
+
+          <div>
+          <SiAdobephotoshop />
+            <h5>Photoshop
+            </h5>
+          </div>
+
+
         </div>
       </div>
     </>

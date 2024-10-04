@@ -6,6 +6,10 @@
   /* color: var(--clr-primary); */
   color: #c80202;
 }
+.about_name1{
+  color: #c80202;
+
+}
 .about > :nth-child(2) {
   margin-top: 1.2em;
   font-size: 2rem;

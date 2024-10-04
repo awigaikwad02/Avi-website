@@ -31,6 +31,89 @@ export const Timeline = () => {
           My <span className="different">Timeline 💫</span>
         </h2>
         <VerticalTimeline lineColor={linecolor}>
+        <VerticalTimelineElement
+            className="vertical-timeline-element--work"
+            date={"Sept 2024 - Dec 2024"}
+            contentStyle={{
+              boxShadow: `var(--shadow)`,
+              border: "3px solid var(--clr-primary)",
+              backgroundColor: `var(--clr-bg)`,
+              textAlign: "center",
+              color: `var(--clr-fg-alt)`,
+            }}
+            contentArrowStyle={{
+              borderRight: "16px solid  var(--clr-primary)",
+            }}
+            iconStyle={{
+              border: ` 3px solid var(--clr-primary)`,
+              backgroundColor: `var(--clr-bg)`,
+              color: `var(--clr-primary)`,
+            }}
+            icon={<WorkIcon />}
+          >
+            <h3
+              className="vertical-timeline-element-title"
+              data-aos="fade-right"
+            >
+              Graduate Assistent
+            </h3>
+            <h4
+              className="vertical-timeline-element-subtitle"
+              data-aos="fade-right"
+            >
+              D'Amore-McKim School of Business
+            </h4>
+            <p data-aos="fade-right">
+            
+            As a Graduate Assistant, I collaborate with the career services team to conduct tailored resume 
+reviews, facilitate interview preparation workshops, and organize career fairs. These initiatives 
+enable students to connect with industry professionals and gain insights into evolving job market 
+requirements. Additionally, I developed and maintained a database to streamline scheduling, 
+enhancing management efficiency for academic advisors. 
+            </p>
+          </VerticalTimelineElement>
+          <VerticalTimelineElement
+            className="vertical-timeline-element--work"
+            date={"May 2024 - Aug 2024"}
+            contentStyle={{
+              boxShadow: `var(--shadow)`,
+              border: "3px solid var(--clr-primary)",
+              backgroundColor: `var(--clr-bg)`,
+              textAlign: "center",
+              color: `var(--clr-fg-alt)`,
+            }}
+            contentArrowStyle={{
+              borderRight: "16px solid  var(--clr-primary)",
+            }}
+            iconStyle={{
+              border: ` 3px solid var(--clr-primary)`,
+              backgroundColor: `var(--clr-bg)`,
+              color: `var(--clr-primary)`,
+            }}
+            icon={<WorkIcon />}
+          >
+            <h3
+              className="vertical-timeline-element-title"
+              data-aos="fade-right"
+            >
+              Analytics Intern
+            </h3>
+            <h4
+              className="vertical-timeline-element-subtitle"
+              data-aos="fade-right"
+            >
+              Honeywell
+            </h4>
+            <p data-aos="fade-right">
+            
+            As an Analytics Intern at, I focused on optimizing product margins to enhance profitability. I 
+developed automated Tableau dashboards to support strategic decision-making and collaborated 
+with senior management to deliver actionable insights. My analysis of both Honeywell and non
+Honeywell products using Salesforce and Alteryx helped identify inefficiencies and uncover cost
+saving opportunities.  
+            </p>
+          </VerticalTimelineElement>
+
           <VerticalTimelineElement
             date={"Sept 2023 - Dec 2024"}
             contentStyle={{
@@ -63,7 +146,7 @@ export const Timeline = () => {
               Northeastern University
             </h4>
             <p data-aos="fade-right">
-              Masters of Science in Business Analytics
+              Pursuing Masters of Science in Business Analytics
             </p>
           </VerticalTimelineElement>
           <VerticalTimelineElement
@@ -98,7 +181,7 @@ export const Timeline = () => {
               KPMG India
             </h4>
             <p data-aos="fade-right">
-            As a Risk Analyst, I held a critical role in safeguarding our clients' interests by conducting meticulous proactive and reactive investigations. My primary mission was to detect and prevent fraud, ensuring the highest level of protection for our valued clients. My work involved employing analytical skills and a keen eye for detail to assess potential risks, analyze data, and develop strategies to mitigate them effectively.
+            As a Risk Analyst, I held a critical role in safeguarding our clients' interests by conducting meticulous proactive and reactive investigations. My primary mission was to detect and prevent fraud, ensuring the highest level of protection for our valued clients. My work involved employing analytical skills and a keen eye for detail to assess potential risks, analyze data, and develop strategies to mitigate them effectively. I thrived in a dynamic environment where staying one step ahead of potential threats was paramount. My dedication and commitment to upholding the integrity of our services were unwavering, making me an invaluable asset to the team.
             </p>
           </VerticalTimelineElement>
           <VerticalTimelineElement

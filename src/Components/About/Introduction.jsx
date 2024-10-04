@@ -48,13 +48,14 @@ export const Introduction = () => {
             */}
 
             <h4>
-            I am currently pursuing a Master's in Business Analytics at Northeastern University, with a Bachelor's in 
-            Management Studies focused on Marketing. As a former risk analyst, I've analyzed data in finance, real estate, 
-            and consumer markets. I've also interned in marketing and business consulting, gaining experience in 
-            campaigns, creative ideation, and government interactions. Alongside my academic and professional pursuits, 
-            I've earned awards in film production, developed leadership skills in sports, and gained proficiency in 
-            programming. I aspire to leverage my analytics and strategic thinking skills in consulting roles to drive 
-            impactful solutions in the business world.
+            Hello! I'm Avishkar Naresh Gaikwad, currently pursuing a Master’s in Business Analytics at 
+Northeastern University. I hold a Bachelor’s in Management Studies from Sydenham College. I 
+recently completed an internship at Honeywell, where I worked with tools like Tableau, Alteryx, 
+Snowflake, and Salesforce to generate data insights for strategic decisions. Prior to this, I worked at 
+KPMG as a Risk Analyst, focusing on forensic services and data analytics. I also have experience in 
+marketing and business consulting, where I worked on client acquisition and retention strategies. My 
+technical skills include Python, R, SQL, Power BI, and Microsoft Office, making me a versatile 
+contributor to business analytics. 
             </h4>
               
 
