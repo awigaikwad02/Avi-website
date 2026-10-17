@@ -346,7 +346,7 @@ export const projects = [
     eyebrow: "AI Study Notes",
     tagline: "Turn complex study material into notes you'll actually understand.",
     description:
-      "A learning app that organises PDFs and photos of printed pages into structured notes, flashcards and quizzes. PDF.js and Tesseract OCR run entirely in the browser. Optional live AI generation runs through a server-side function, so no API key is ever exposed.",
+      "A learning app that organises PDFs and photos of printed pages into structured notes, flashcards and quizzes. PDF.js and Tesseract OCR run entirely in the browser with no API or backend, and the sample files open prepared demo notes instantly.",
     features: [
       "PDF text extraction and on-device OCR for JPG/PNG pages",
       "Source-based organiser: headings, key terms, definitions and passages with page references",
@@ -354,7 +354,7 @@ export const projects = [
       "3D flip flashcards (Known / Needs review) and scored quizzes",
       "Formatted PDF and Markdown export",
     ],
-    tech: ["React", "TypeScript", "Vite", "Tailwind CSS", "PDF.js", "Tesseract.js", "jsPDF", "Claude API (optional)"],
+    tech: ["React", "TypeScript", "Vite", "Tailwind CSS", "PDF.js", "Tesseract.js", "jsPDF"],
     badge: "Runs in your browser",
     demo: "/projects/notecraft-ai/",
     github: "https://github.com/awigaikwad02/notecraft-ai",
