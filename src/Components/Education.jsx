@@ -5,7 +5,7 @@ import { education } from "../data";
 export const Education = () => (
   <section className="section section--alt" id="education">
     <div className="container">
-      <SectionTitle index="06" kicker="Education" title={<span className="hl">Foundations.</span>} />
+      <SectionTitle index="07" kicker="Education" title={<span className="hl">Foundations.</span>} />
       <div className="edu">
         {education.map((e, i) => (
           <article className="tile edu__item" key={e.school} data-aos="fade-up" data-aos-delay={i * 100}>

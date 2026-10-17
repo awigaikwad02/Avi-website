@@ -317,3 +317,47 @@ export const education = [
     location: "Mumbai, India",
   },
 ];
+
+// Featured portfolio projects. Live demos are served from public/projects/<slug>/.
+export const projects = [
+  {
+    id: "buildsignal",
+    name: "BuildSignal",
+    eyebrow: "Construction Intelligence",
+    tagline: "Turning public building permits into commercial insight.",
+    description:
+      "An interactive construction intelligence dashboard built on 300 real building permits from Chicago and NYC open data. A Python pipeline normalises the raw records, and a documented scoring model ranks each permit by its potential relevance to building-system suppliers.",
+    features: [
+      "Executive dashboard with KPIs, area, category and score-distribution charts",
+      "Searchable, sortable permit explorer with filters and CSV export",
+      "Rule-based opportunity score (0–100) with a per-factor explanation",
+      "Company directory taken from permit records; personal names withheld",
+      "Bookmarked watchlist, deep links and a dark/light theme",
+    ],
+    tech: ["React", "TypeScript", "Vite", "Tailwind CSS", "Recharts", "Python", "Socrata Open Data"],
+    badge: "Real public data",
+    demo: "/projects/buildsignal/",
+    github: "https://github.com/awigaikwad02/buildsignal",
+    image: "buildsignal",
+  },
+  {
+    id: "notecraft-ai",
+    name: "NoteCraft AI",
+    eyebrow: "AI Study Notes",
+    tagline: "Turn complex study material into notes you'll actually understand.",
+    description:
+      "A learning app that organises PDFs and photos of printed pages into structured notes, flashcards and quizzes. PDF.js and Tesseract OCR run entirely in the browser. Optional live AI generation runs through a server-side function, so no API key is ever exposed.",
+    features: [
+      "PDF text extraction and on-device OCR for JPG/PNG pages",
+      "Source-based organiser: headings, key terms, definitions and passages with page references",
+      "Notes reader with three note styles, reading progress and a chapter sidebar",
+      "3D flip flashcards (Known / Needs review) and scored quizzes",
+      "Formatted PDF and Markdown export",
+    ],
+    tech: ["React", "TypeScript", "Vite", "Tailwind CSS", "PDF.js", "Tesseract.js", "jsPDF", "Claude API (optional)"],
+    badge: "Runs in your browser",
+    demo: "/projects/notecraft-ai/",
+    github: "https://github.com/awigaikwad02/notecraft-ai",
+    image: "notecraft",
+  },
+];
