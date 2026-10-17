@@ -26,6 +26,12 @@
   --shadow-md: 0 14px 30px -18px rgba(0, 0, 0, 0.7);
   --photo-ring: #1b1b1b;
   --status: #22c55e;
+  /* Burgundy accent: highlights, active states and primary buttons */
+  --brand: #e83d68;
+  --btn-bg: #650d2b;
+  --btn-hover: #7a1336;
+  --btn-border: #e83d68;
+  --on-btn: #ffffff;
   color-scheme: dark;
 }
 
@@ -50,6 +56,12 @@
   --shadow-md: 0 14px 30px -18px rgba(0, 0, 0, 0.2);
   --photo-ring: #ffffff;
   --status: #15803d;
+  /* Burgundy accent: highlights, active states and primary buttons */
+  --brand: #8b1538;
+  --btn-bg: #8b1538;
+  --btn-hover: #a01d45;
+  --btn-border: #8b1538;
+  --on-btn: #ffffff;
   color-scheme: light;
 }
 

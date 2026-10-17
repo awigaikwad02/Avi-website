@@ -5,7 +5,7 @@
 
 /* Highlighted words in headings. */
 .hl {
-  color: var(--highlight);
+  color: var(--brand);
 }
 
 [data-aos="fade-up"] {
@@ -22,14 +22,14 @@
   border-radius: 10px;
   font-size: 16px;
   font-weight: 600;
-  background: var(--accent);
-  color: var(--on-accent);
-  border: 1px solid var(--accent);
+  background: var(--btn-bg);
+  color: var(--on-btn);
+  border: 1px solid var(--btn-border);
   transition: background 0.2s, border-color 0.2s, transform 0.2s;
 }
 .btn:hover {
-  background: var(--accent-hover);
-  border-color: var(--accent-hover);
+  background: var(--btn-hover);
+  border-color: var(--btn-border);
   transform: translateY(-1px);
 }
 .btn svg {
@@ -199,7 +199,7 @@
   color: var(--text);
 }
 .nav__links a.is-active {
-  color: var(--accent);
+  color: var(--brand);
   background: var(--accent-soft);
 }
 .nav__actions {
@@ -492,13 +492,13 @@
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.12em;
-  color: var(--accent);
+  color: var(--brand);
 }
 .section__kicker .mono {
   padding: 2px 8px;
   border-radius: 6px;
   font-size: 12px;
-  color: var(--accent);
+  color: var(--brand);
   background: var(--accent-soft);
   border: 1px solid var(--accent-line);
 }
@@ -527,7 +527,7 @@
   color: var(--text);
   margin-bottom: 64px;
   padding-left: 24px;
-  border-left: 3px solid var(--accent);
+  border-left: 3px solid var(--brand);
 }
 .statement span {
   transition: opacity 0.15s linear;
@@ -562,7 +562,7 @@
   letter-spacing: -0.04em;
   line-height: 1;
   margin-bottom: 6px;
-  color: var(--accent);
+  color: var(--brand);
 }
 .about__stats span {
   font-size: 14px;
@@ -680,7 +680,7 @@
   width: 6px;
   height: 6px;
   border-radius: 50%;
-  background: var(--accent);
+  background: var(--brand);
 }
 .discipline__groups li:last-child {
   border-bottom: none;
@@ -736,7 +736,7 @@
   font-weight: 800;
   letter-spacing: -0.045em;
   line-height: 1;
-  color: var(--accent);
+  color: var(--brand);
   font-variant-numeric: tabular-nums;
 }
 .bento__item--wide .bento__value {
@@ -788,7 +788,7 @@
   position: absolute;
   inset: 0;
   transform-origin: top;
-  background: var(--accent);
+  background: var(--brand);
 }
 .timeline__item {
   position: relative;
@@ -801,12 +801,12 @@
   height: 16px;
   border-radius: 50%;
   background: var(--bg-alt);
-  border: 2px solid var(--accent);
+  border: 2px solid var(--brand);
   transition: background 0.2s, box-shadow 0.2s;
 }
 .timeline__item.is-open .timeline__dot,
 .timeline__item:hover .timeline__dot {
-  background: var(--accent);
+  background: var(--brand);
   box-shadow: 0 0 0 5px var(--accent-soft);
 }
 .timeline__card {
@@ -906,7 +906,7 @@
   width: 7px;
   height: 7px;
   border-radius: 50%;
-  background: var(--accent);
+  background: var(--brand);
 }
 
 @media (max-width: 600px) {
@@ -1127,7 +1127,7 @@
   border-radius: 6px;
   font-size: 11px;
   letter-spacing: 0.04em;
-  color: var(--accent);
+  color: var(--brand);
   background: var(--accent-soft);
   border: 1px solid var(--accent-line);
 }
@@ -1159,7 +1159,7 @@
 .project__features svg {
   flex-shrink: 0;
   margin-top: 4px;
-  color: var(--accent);
+  color: var(--brand);
 }
 .project__cta {
   display: flex;
@@ -1194,7 +1194,7 @@
 }
 .edu__item {
   padding: 34px;
-  border-top: 3px solid var(--accent);
+  border-top: 3px solid var(--brand);
 }
 .edu__item:hover {
   transform: translateY(-3px);
