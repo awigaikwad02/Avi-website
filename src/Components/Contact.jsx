@@ -32,7 +32,7 @@ export const Contact = () => {
     <section className="section contact" id="contact">
       <div className="container contact__inner">
         <span className="section__kicker" data-aos="fade-up">
-          <span className="mono">07</span> Contact
+          <span className="mono">08</span> Contact
         </span>
         <h2 className="contact__title" data-aos="fade-up">
           Let's talk <span className="hl">growth.</span>
