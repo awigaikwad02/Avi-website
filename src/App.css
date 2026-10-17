@@ -5,7 +5,7 @@
 
 /* Highlighted words in headings. */
 .hl {
-  color: var(--accent);
+  color: var(--highlight);
 }
 
 [data-aos="fade-up"] {
@@ -262,42 +262,16 @@
   text-align: center;
 }
 
-/* Photo centred inside a slow orbit of tool icons. */
-.hero__visual {
-  --size: 400px;
-  --photo: 248px;
-  position: relative;
-  width: var(--size);
-  height: var(--size);
-  display: grid;
-  place-items: center;
-  margin-bottom: 16px;
-}
-.hero__visual::before,
-.hero__visual::after {
-  content: "";
-  position: absolute;
-  border-radius: 50%;
-  border: 1px solid var(--border);
-}
-.hero__visual::before {
-  inset: 0;
-  border-style: dashed;
-}
-.hero__visual::after {
-  inset: 64px;
-  border-color: var(--border-soft);
-}
+/* Profile photo, centred and static. */
 .hero__photo {
-  position: relative;
-  z-index: 1;
-  width: var(--photo);
-  height: var(--photo);
+  width: 210px;
+  height: 210px;
+  margin-bottom: 26px;
   border-radius: 50%;
-  padding: 5px;
+  padding: 6px;
   background: var(--photo-ring);
-  border: 2px solid var(--accent);
-  box-shadow: var(--shadow-md);
+  border: 1px solid var(--border);
+  box-shadow: 0 0 0 8px var(--accent-soft), var(--shadow-md);
 }
 .hero__photo img {
   width: 100%;
@@ -306,53 +280,54 @@
   object-fit: cover;
   object-position: 50% 38%;
 }
-.orbit {
-  position: absolute;
-  inset: 0;
-  animation: spin 70s linear infinite;
+
+/* Row of core tools under the call-to-action buttons. */
+.toolbelt {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 40px;
 }
-.hero__visual:hover .orbit,
-.hero__visual:hover .orbit__icon {
-  animation-play-state: paused;
-}
-.orbit__item {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 0;
-  height: 0;
-  transform: rotate(var(--angle)) translateY(calc(var(--size) / -2));
-}
-.orbit__icon {
-  position: absolute;
-  left: -22px;
-  top: -22px;
+.toolbelt__item {
+  position: relative;
   display: grid;
   place-items: center;
-  width: 44px;
-  height: 44px;
+  width: 46px;
+  height: 46px;
   border-radius: 12px;
   font-size: 19px;
-  color: var(--accent);
+  color: var(--text-secondary);
   background: var(--surface);
   border: 1px solid var(--border);
-  box-shadow: var(--shadow-sm);
-  /* Counter-rotate so icons stay upright while the orbit turns. */
-  transform: rotate(calc(var(--angle) * -1));
-  animation: counter 70s linear infinite;
+  transition: color 0.2s, border-color 0.2s, transform 0.2s;
 }
-@keyframes spin {
-  to {
-    transform: rotate(360deg);
-  }
+.toolbelt__item:hover,
+.toolbelt__item:focus-visible {
+  color: var(--text);
+  border-color: var(--accent-line);
+  transform: translateY(-3px);
 }
-@keyframes counter {
-  from {
-    transform: rotate(calc(var(--angle) * -1));
-  }
-  to {
-    transform: rotate(calc(var(--angle) * -1 - 360deg));
-  }
+.toolbelt__label {
+  position: absolute;
+  bottom: calc(100% + 8px);
+  left: 50%;
+  translate: -50% 4px;
+  padding: 4px 9px;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 500;
+  white-space: nowrap;
+  color: var(--on-accent);
+  background: var(--accent);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s, translate 0.2s;
+}
+.toolbelt__item:hover .toolbelt__label,
+.toolbelt__item:focus-visible .toolbelt__label {
+  opacity: 1;
+  translate: -50% 0;
 }
 
 .hero__status {
@@ -472,16 +447,14 @@
   .hero {
     padding-top: 100px;
   }
-  .hero__visual {
-    --size: 300px;
-    --photo: 196px;
+  .hero__photo {
+    width: 176px;
+    height: 176px;
   }
-  .hero__visual::after {
-    inset: 46px;
+  .toolbelt {
+    gap: 6px;
   }
-  .orbit__icon {
-    left: -18px;
-    top: -18px;
+  .toolbelt__item {
     width: 36px;
     height: 36px;
     font-size: 16px;
