@@ -2,31 +2,38 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <link rel="icon" href="%PUBLIC_URL%/favicon.ico">
+    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#0b0d17" />
     <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+      name="description"
+      content="Avishkar Gaikwad — Data Analyst II at Honeywell Building Technologies. Business analytics, commercial intelligence, BI, data engineering and applied AI."
     />
-    <meta name="theme-color" content="#000000" />
-    <meta name="description" content="I'm a passionate Business Analytics graduate student at Northeastern University, specializing in 
-    transforming data into actionable insights. With experience in risk consulting across finance, 
-    healthcare, and consumer markets, my ultimate goal is to utilize data to tell compelling stories and 
-    drive innovation. Empowering Tomorrow's Business with Data-Driven Stories! " />
-    <meta name="author" content="Vatsal Doshi" />
-    
-    <title>Avishkar Gaikwad | Portfolio</title>
+    <meta name="author" content="Avishkar Gaikwad" />
+    <meta property="og:title" content="Avishkar Gaikwad | Data Analyst II" />
+    <meta
+      property="og:description"
+      content="Business analytics, commercial intelligence & applied AI."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <script>
+      // Set the theme before React renders to avoid a flash.
+      try {
+        var t = localStorage.getItem("theme");
+        if (!t) t = matchMedia("(prefers-color-scheme: light)").matches ? "light" : "dark";
+        document.documentElement.dataset.theme = t;
+      } catch (e) {}
+    </script>
+    <title>Avishkar Gaikwad | Data Analyst II</title>
   </head>
 
   <body>
-    <noscript> You need to enable JavaScript to run this app. </noscript>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
   </body>
 </html>
-<script>
-  setTimeout(function () {
-    const myItem1 = document.querySelector(".react-activity-calendar__count");
-    const myItem2 = document.querySelector(
-      ".react-activity-calendar__legend-colors styles_legendColors__1wUi_"
-    );
-  }, 3000);
-</script>
