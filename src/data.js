@@ -337,7 +337,7 @@ export const projects = [
     tech: ["React", "TypeScript", "Vite", "Tailwind CSS", "Recharts", "Python", "Socrata Open Data"],
     badge: "Real public data",
     demo: "/projects/buildsignal/",
-    github: "https://github.com/awigaikwad02/buildsignal",
+    github: null, // set to "https://github.com/awigaikwad02/buildsignal" once the repo is public
     image: "buildsignal",
   },
   {
@@ -357,7 +357,7 @@ export const projects = [
     tech: ["React", "TypeScript", "Vite", "Tailwind CSS", "PDF.js", "Tesseract.js", "jsPDF"],
     badge: "Runs in your browser",
     demo: "/projects/notecraft-ai/",
-    github: "https://github.com/awigaikwad02/notecraft-ai",
+    github: null, // set to "https://github.com/awigaikwad02/notecraft-ai" once the repo is public
     image: "notecraft",
   },
 ];

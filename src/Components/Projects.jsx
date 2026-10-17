@@ -50,9 +50,11 @@ export const Projects = () => (
                 <a className="btn btn--small" href={p.demo} target="_blank" rel="noreferrer">
                   Live demo <FiArrowUpRight />
                 </a>
-                <a className="btn btn--small btn--ghost" href={p.github} target="_blank" rel="noreferrer">
-                  <FiGithub /> Source code
-                </a>
+                {p.github && (
+                  <a className="btn btn--small btn--ghost" href={p.github} target="_blank" rel="noreferrer">
+                    <FiGithub /> Source code
+                  </a>
+                )}
               </div>
             </div>
           </article>
