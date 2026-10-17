@@ -30,6 +30,22 @@ const Counter = ({ value, start }) => {
   return <>{format(n)}</>;
 };
 
+// Card tilts toward the cursor and a highlight follows it.
+const tilt = (e) => {
+  const el = e.currentTarget;
+  const r = el.getBoundingClientRect();
+  const x = (e.clientX - r.left) / r.width;
+  const y = (e.clientY - r.top) / r.height;
+  el.style.setProperty("--rx", `${(0.5 - y) * 10}deg`);
+  el.style.setProperty("--ry", `${(x - 0.5) * 12}deg`);
+  el.style.setProperty("--mx", `${x * 100}%`);
+  el.style.setProperty("--my", `${y * 100}%`);
+};
+const untilt = (e) => {
+  e.currentTarget.style.setProperty("--rx", "0deg");
+  e.currentTarget.style.setProperty("--ry", "0deg");
+};
+
 export const Impact = () => {
   const [ref, inView] = useInView({ threshold: 0.15 });
 
@@ -42,6 +58,8 @@ export const Impact = () => {
             <div
               className={`tile bento__item ${m.size === "wide" ? "bento__item--wide" : ""}`}
               key={m.label}
+              onMouseMove={tilt}
+              onMouseLeave={untilt}
               data-aos="fade-up"
               data-aos-delay={(i % 4) * 80}
             >

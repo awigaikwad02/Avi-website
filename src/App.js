@@ -12,6 +12,7 @@ import { Skills } from "./Components/Skills";
 import { Education } from "./Components/Education";
 import { Contact } from "./Components/Contact";
 import { Footer } from "./Components/Footer";
+import { Cursor } from "./Components/Cursor";
 import { prefersReducedMotion } from "./hooks/useInView";
 
 export default function App() {
@@ -23,10 +24,19 @@ export default function App() {
       offset: 40,
       disable: prefersReducedMotion(),
     });
+    // Recompute reveal positions when content expands or collapses.
+    let t;
+    const ro = new ResizeObserver(() => {
+      clearTimeout(t);
+      t = setTimeout(() => Aos.refresh(), 150);
+    });
+    ro.observe(document.body);
+    return () => ro.disconnect();
   }, []);
 
   return (
     <div className="app">
+      <Cursor />
       <Navbar />
       <main>
         <Hero />

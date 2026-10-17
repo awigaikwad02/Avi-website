@@ -8,6 +8,7 @@ import {
   FiPhone,
 } from "react-icons/fi";
 import { profile } from "../data";
+import { Magnetic } from "./Magnetic";
 
 export const Contact = () => {
   const [copied, setCopied] = React.useState(false);
@@ -43,9 +44,11 @@ export const Contact = () => {
           conversation.
         </p>
         <div className="contact__cta" data-aos="fade-up">
-          <a href={`mailto:${profile.email}`} className="btn btn--large">
-            Email me
-          </a>
+          <Magnetic>
+            <a href={`mailto:${profile.email}`} className="btn btn--large">
+              Email me
+            </a>
+          </Magnetic>
           <button type="button" className="link-arrow" onClick={copyEmail}>
             {copied ? <FiCheck /> : <FiCopy />}
             {copied ? "Copied to clipboard" : profile.email}

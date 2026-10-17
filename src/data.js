@@ -30,7 +30,6 @@ export const about = {
   ],
   highlights: [
     { label: "Years of experience", value: "3+" },
-    { label: "Enterprise brands", value: "3" },
     { label: "Based in", value: "Atlanta" },
   ],
   differentiator:
