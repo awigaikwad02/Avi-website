@@ -16,8 +16,6 @@ export const profile = {
   tagline:
     "I connect data, AI and technology with commercial strategy - building the systems that help organizations find opportunities, sell smarter and grow.",
   email: "gaikwad.avi@northeastern.edu",
-  phone: "+1 857 200 5017",
-  phoneHref: "tel:+18572005017",
   linkedin: "https://www.linkedin.com/in/avishkar-gaikwad-/",
   calendly: "https://calendly.com/gaikwad-avi/introductory-call",
 };

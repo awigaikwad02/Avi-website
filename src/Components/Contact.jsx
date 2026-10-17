@@ -5,7 +5,6 @@ import {
   FiChevronRight,
   FiCopy,
   FiLinkedin,
-  FiPhone,
 } from "react-icons/fi";
 import { profile } from "../data";
 
@@ -25,7 +24,6 @@ export const Contact = () => {
   const links = [
     { icon: FiLinkedin, label: "LinkedIn", href: profile.linkedin },
     { icon: FiCalendar, label: "Book a call", href: profile.calendly },
-    { icon: FiPhone, label: profile.phone, href: profile.phoneHref },
   ];
 
   return (

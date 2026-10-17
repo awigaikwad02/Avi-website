@@ -18,7 +18,8 @@ const Counter = ({ value, start }) => {
     const t0 = performance.now();
     let frame;
     const tick = (t) => {
-      const p = Math.min((t - t0) / duration, 1);
+      // rAF timestamps can precede t0, so clamp to [0, 1] to avoid negative counts.
+      const p = Math.min(Math.max((t - t0) / duration, 0), 1);
       const eased = 1 - Math.pow(1 - p, 4);
       setN(Math.round(value * eased));
       if (p < 1) frame = requestAnimationFrame(tick);
