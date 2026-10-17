@@ -8,7 +8,6 @@ import {
   FiPhone,
 } from "react-icons/fi";
 import { profile } from "../data";
-import { Magnetic } from "./Magnetic";
 
 export const Contact = () => {
   const [copied, setCopied] = React.useState(false);
@@ -36,19 +35,17 @@ export const Contact = () => {
           <span className="mono">07</span> Contact
         </span>
         <h2 className="contact__title" data-aos="fade-up">
-          Let's talk <span className="metal">growth.</span>
+          Let's talk <span className="hl">growth.</span>
         </h2>
         <p className="contact__text" data-aos="fade-up">
           Open to roles across data & analytics engineering, applied AI,
-          commercial analytics and go-to-market strategy — or just a good
+          commercial analytics and go-to-market strategy - or just a good
           conversation.
         </p>
         <div className="contact__cta" data-aos="fade-up">
-          <Magnetic>
-            <a href={`mailto:${profile.email}`} className="btn btn--large">
-              Email me
-            </a>
-          </Magnetic>
+          <a href={`mailto:${profile.email}`} className="btn btn--large">
+            Email me
+          </a>
           <button type="button" className="link-arrow" onClick={copyEmail}>
             {copied ? <FiCheck /> : <FiCopy />}
             {copied ? "Copied to clipboard" : profile.email}

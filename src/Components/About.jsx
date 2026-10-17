@@ -25,7 +25,7 @@ const ScrollStatement = ({ text }) => {
 export const About = () => (
   <section className="section" id="about">
     <div className="container">
-      <SectionTitle index="01" kicker="About" title="Where data, AI and commercial strategy meet." />
+      <SectionTitle index="01" kicker="About" title={<>Where data, AI and <span className="hl">commercial strategy</span> meet.</>} />
       <ScrollStatement text={about.differentiator} />
       <div className="about">
         <div className="about__text" data-aos="fade-up">

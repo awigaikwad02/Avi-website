@@ -12,18 +12,21 @@ import { Skills } from "./Components/Skills";
 import { Education } from "./Components/Education";
 import { Contact } from "./Components/Contact";
 import { Footer } from "./Components/Footer";
-import { Cursor } from "./Components/Cursor";
 import { prefersReducedMotion } from "./hooks/useInView";
 
 export default function App() {
   React.useEffect(() => {
-    Aos.init({
-      duration: 900,
-      once: true,
-      easing: "ease-out-quart",
-      offset: 40,
-      disable: prefersReducedMotion(),
-    });
+    // Start entrance animations once the loading screen has cleared.
+    const start = () =>
+      Aos.init({
+        duration: 800,
+        once: true,
+        easing: "ease-out-quart",
+        offset: 40,
+        disable: prefersReducedMotion(),
+      });
+    if (window.__preloaderDone || !document.getElementById("preloader")) start();
+    else window.addEventListener("preloader:done", start, { once: true });
     // Recompute reveal positions when content expands or collapses.
     let t;
     const ro = new ResizeObserver(() => {
@@ -36,7 +39,6 @@ export default function App() {
 
   return (
     <div className="app">
-      <Cursor />
       <Navbar />
       <main>
         <Hero />

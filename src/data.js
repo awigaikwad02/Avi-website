@@ -14,7 +14,7 @@ export const profile = {
     "AI Automation",
   ],
   tagline:
-    "I connect data, AI and technology with commercial strategy — building the systems that help organizations find opportunities, sell smarter and grow.",
+    "I connect data, AI and technology with commercial strategy - building the systems that help organizations find opportunities, sell smarter and grow.",
   email: "gaikwad.avi@northeastern.edu",
   phone: "+1 857 200 5017",
   phoneHref: "tel:+18572005017",
@@ -26,14 +26,14 @@ export const about = {
   paragraphs: [
     "I'm a technology-driven analytics and go-to-market professional with 3+ years of experience at the intersection of data, artificial intelligence, business strategy and commercial growth.",
     "As a Data Analyst II at Honeywell Building Technologies, I build technical solutions and commercial intelligence capabilities that help teams identify market opportunities, optimize sales processes, strengthen partner ecosystems and make data-driven decisions.",
-    "Across Honeywell, KPMG and Thermo Fisher Scientific, I've combined enterprise analytics, AI engineering, business intelligence, consulting and GTM execution — and I'm most interested in how emerging technology and market intelligence can build scalable revenue engines.",
+    "Across Honeywell, KPMG and Thermo Fisher Scientific, I've combined enterprise analytics, AI engineering, business intelligence, consulting and GTM execution - and I'm most interested in how emerging technology and market intelligence can build scalable revenue engines.",
   ],
   highlights: [
     { label: "Years of experience", value: "3+" },
     { label: "Based in", value: "Atlanta" },
   ],
   differentiator:
-    "I bring technical execution and commercial understanding together. I can work with enterprise data, build analytical systems and automate workflows — then translate those capabilities into market planning, sales effectiveness, partner enablement and business performance.",
+    "I bring technical execution and commercial understanding together. I can work with enterprise data, build analytical systems and automate workflows - then translate those capabilities into market planning, sales effectiveness, partner enablement and business performance.",
 };
 
 // The two complementary disciplines the profile is built around.
@@ -118,7 +118,7 @@ export const experience = [
     company: "Honeywell Building Technologies",
     short: "Honeywell",
     role: "Data Analyst II",
-    period: "Jan 2025 – Present",
+    period: "Jan 2025 - Present",
     location: "Atlanta, GA",
     summary:
       "Commercial analytics, GTM intelligence, partner enablement and technical automation for an enterprise building technologies organization.",
@@ -135,8 +135,8 @@ export const experience = [
     id: "thermo",
     company: "Thermo Fisher Scientific",
     short: "Thermo Fisher",
-    role: "Data Analyst – Capstone",
-    period: "Sep 2024 – Dec 2024",
+    role: "Data Analyst - Capstone",
+    period: "Sep 2024 - Dec 2024",
     location: "Boston, MA",
     summary:
       "Customer analytics, product affinity, predictive modeling and commercial decision support.",
@@ -153,7 +153,7 @@ export const experience = [
     company: "Honeywell Building Technologies",
     short: "Honeywell Intern",
     role: "Analytics Intern",
-    period: "May 2024 – Aug 2024",
+    period: "May 2024 - Aug 2024",
     location: "Atlanta, GA",
     summary:
       "Commercial profitability, financial analytics and reporting solutions.",
@@ -168,8 +168,8 @@ export const experience = [
     id: "kpmg",
     company: "KPMG India",
     short: "KPMG",
-    role: "Analyst – Advisory",
-    period: "Jun 2022 – Jul 2023",
+    role: "Analyst - Advisory",
+    period: "Jun 2022 - Jul 2023",
     location: "India",
     summary:
       "Strategic consulting engagements across consumer, retail, healthcare and real estate.",
@@ -186,7 +186,7 @@ export const experience = [
     company: "IFortis Corporate",
     short: "IFortis",
     role: "Marketing Intern",
-    period: "Jun 2021 – Jul 2021",
+    period: "Jun 2021 - Jul 2021",
     location: "Remote",
     summary:
       "Marketing internship focused on customer engagement and communication.",
@@ -198,7 +198,7 @@ export const experience = [
     company: "Astral Advertising and Marketing UK Ltd",
     short: "Astral",
     role: "Consulting Intern",
-    period: "Sep 2020 – Feb 2021",
+    period: "Sep 2020 - Feb 2021",
     location: "On-site",
     summary:
       "Client-facing consulting internship working alongside the marketing team.",

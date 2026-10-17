@@ -86,7 +86,7 @@ export const Skills = () => {
   return (
     <section className="section" id="skills">
       <div className="container">
-        <SectionTitle index="05" kicker="Skills" title="The toolkit." />
+        <SectionTitle index="05" kicker="Skills" title={<>The <span className="hl">toolkit.</span></>} />
 
         <div className="skills__controls" data-aos="fade-up">
           <div className="segmented" role="group" aria-label="Filter skills">

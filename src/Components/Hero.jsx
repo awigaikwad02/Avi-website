@@ -1,5 +1,10 @@
 import React from "react";
-import { FiArrowDownRight, FiArrowUpRight, FiDatabase, FiMapPin } from "react-icons/fi";
+import {
+  FiArrowDownRight,
+  FiArrowUpRight,
+  FiDatabase,
+  FiMapPin,
+} from "react-icons/fi";
 import {
   SiPowerbi,
   SiPython,
@@ -10,8 +15,7 @@ import {
   SiMicrosoftexcel,
 } from "react-icons/si";
 import { profile, skillCategories } from "../data";
-import { Magnetic } from "./Magnetic";
-import { ScrambleText } from "./ScrambleText";
+import { prefersReducedMotion } from "../hooks/useInView";
 import profilePic from "../assets/profile.jpg";
 
 const marquee = skillCategories.flatMap((c) => c.skills.map((s) => s.name));
@@ -27,11 +31,27 @@ const orbit = [
   { Icon: SiMicrosoftexcel, label: "Excel" },
 ];
 
+// Cycles through the role titles with a gentle fade.
+const RotatingRole = ({ words }) => {
+  const [i, setI] = React.useState(0);
+
+  React.useEffect(() => {
+    if (prefersReducedMotion()) return undefined;
+    const id = setInterval(() => setI((n) => (n + 1) % words.length), 2600);
+    return () => clearInterval(id);
+  }, [words.length]);
+
+  return (
+    <span className="rotator" key={i}>
+      {words[i]}
+    </span>
+  );
+};
+
 export const Hero = () => (
   <section className="hero" id="top">
-    <div className="hero__grid" aria-hidden="true" />
     <div className="container hero__inner">
-      <div className="hero__visual" data-aos="zoom-in">
+      <div className="hero__visual" data-aos="fade-up">
         <div className="orbit" aria-hidden="true">
           {orbit.map(({ Icon, label }, i) => (
             <span
@@ -39,43 +59,45 @@ export const Hero = () => (
               key={label}
               style={{ "--angle": `${(360 / orbit.length) * i}deg` }}
             >
-              <span className="orbit__icon">
+              <span className="orbit__icon" title={label}>
                 <Icon />
-                <em>{label}</em>
               </span>
             </span>
           ))}
         </div>
         <div className="hero__photo">
-          <img src={profilePic} alt={profile.name} />
+          <img
+            src={profilePic}
+            alt={profile.name}
+            width="820"
+            height="820"
+            decoding="async"
+          />
         </div>
       </div>
 
       <p className="hero__status" data-aos="fade-up">
-        <span className="pulse" /> {profile.title} @ Honeywell ·{" "}
+        <span className="pulse" /> {profile.title} @ Honeywell
+        <span className="hero__sep" />
         <FiMapPin /> {profile.location}
       </p>
-      <h1 className="hero__title" data-aos="fade-up" data-aos-delay="80">
-        {profile.name}
+      <h1 className="hero__title" data-aos="fade-up" data-aos-delay="60">
+        Avishkar <span className="hl">Gaikwad</span>
       </h1>
-      <p className="hero__role" data-aos="fade-up" data-aos-delay="140">
-        <span className="metal">Data & AI</span> ×{" "}
-        <ScrambleText words={profile.roles} />
+      <p className="hero__role" data-aos="fade-up" data-aos-delay="120">
+        Data & AI <span className="hero__dot">·</span>{" "}
+        <RotatingRole words={profile.roles} />
       </p>
-      <p className="hero__tagline" data-aos="fade-up" data-aos-delay="200">
+      <p className="hero__tagline" data-aos="fade-up" data-aos-delay="180">
         {profile.tagline}
       </p>
-      <div className="hero__cta" data-aos="fade-up" data-aos-delay="260">
-        <Magnetic>
-          <a href="#contact" className="btn">
-            Get in touch <FiArrowUpRight />
-          </a>
-        </Magnetic>
-        <Magnetic>
-          <a href="#experience" className="btn btn--ghost">
-            See my work <FiArrowDownRight />
-          </a>
-        </Magnetic>
+      <div className="hero__cta" data-aos="fade-up" data-aos-delay="240">
+        <a href="#contact" className="btn">
+          Get in touch <FiArrowUpRight />
+        </a>
+        <a href="#experience" className="btn btn--ghost">
+          See my work <FiArrowDownRight />
+        </a>
       </div>
     </div>
 

@@ -12,7 +12,7 @@ export const Experience = () => {
   return (
     <section className="section section--alt" id="experience">
       <div className="container">
-        <SectionTitle index="04" kicker="Experience" title="Where I've made an impact." />
+        <SectionTitle index="04" kicker="Experience" title={<>Where I've made an <span className="hl">impact.</span></>} />
 
         <ol className="timeline" ref={ref}>
           <span className="timeline__line" aria-hidden="true">

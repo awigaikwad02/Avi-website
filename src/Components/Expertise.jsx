@@ -13,7 +13,7 @@ export const Expertise = () => {
       <div className="container">
         <SectionTitle
           index="02" kicker="Expertise"
-          title="Two disciplines. One focus: growth."
+          title={<>Two disciplines. One focus: <span className="hl">growth.</span></>}
           center
         />
 
