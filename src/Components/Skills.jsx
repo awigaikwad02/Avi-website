@@ -19,18 +19,21 @@ import {
 import {
   FiCpu,
   FiDatabase,
+  FiDollarSign,
   FiGitMerge,
+  FiGlobe,
   FiLink,
   FiSearch,
   FiServer,
   FiShuffle,
   FiSliders,
+  FiTarget,
   FiTrendingUp,
+  FiUsers,
   FiZap,
 } from "react-icons/fi";
 import { SectionTitle } from "./About";
-import { skillCategories, expertise } from "../data";
-import { trackSpotlight } from "../hooks/useInView";
+import { skillCategories, focus } from "../data";
 
 const icons = {
   powerbi: SiPowerbi,
@@ -53,6 +56,10 @@ const icons = {
   rag: FiSearch,
   tune: FiSliders,
   agent: FiZap,
+  market: FiGlobe,
+  partner: FiUsers,
+  pricing: FiDollarSign,
+  target: FiTarget,
   azure: SiMicrosoftazure,
   git: SiGit,
   jira: SiJira,
@@ -77,16 +84,16 @@ export const Skills = () => {
     );
 
   return (
-    <section className="section section--alt" id="skills">
+    <section className="section" id="skills">
       <div className="container">
-        <SectionTitle kicker="Skills" title="Toolkit" />
+        <SectionTitle kicker="Skills" title="The toolkit." />
 
         <div className="skills__controls" data-aos="fade-up">
-          <div className="chips" role="group" aria-label="Filter skills">
+          <div className="segmented" role="group" aria-label="Filter skills">
             {[all, ...skillCategories].map((c) => (
               <button
                 key={c.id}
-                className={`chip ${filter === c.id ? "is-active" : ""}`}
+                className={filter === c.id ? "is-active" : ""}
                 onClick={() => setFilter(c.id)}
                 aria-pressed={filter === c.id}
               >
@@ -98,7 +105,7 @@ export const Skills = () => {
             <FiSearch />
             <input
               type="search"
-              placeholder="Search skills…"
+              placeholder="Search"
               value={query}
               onChange={(e) => setQuery(e.target.value)}
               aria-label="Search skills"
@@ -110,19 +117,9 @@ export const Skills = () => {
           {skills.map((s) => {
             const Icon = icons[s.icon] || FiCpu;
             return (
-              <div
-                className="card skill spotlight"
-                key={s.name}
-                onMouseMove={trackSpotlight}
-                tabIndex={0}
-              >
-                <div className="skill__top">
-                  <Icon className="skill__icon" />
-                  <div>
-                    <h3>{s.name}</h3>
-                    <span className="skill__cat">{s.category}</span>
-                  </div>
-                </div>
+              <div className="tile skill" key={`${s.category}-${s.name}`} tabIndex={0}>
+                <Icon className="skill__icon" />
+                <h3>{s.name}</h3>
                 <p>{s.detail}</p>
               </div>
             );
@@ -132,23 +129,24 @@ export const Skills = () => {
           )}
         </div>
 
-        <h3 className="subhead" data-aos="fade-up">
-          Domain expertise
-        </h3>
-        <div className="expertise">
-          {expertise.map((e, i) => (
-            <div
-              className="card expertise__item spotlight"
-              key={e.title}
-              onMouseMove={trackSpotlight}
-              data-aos="fade-up"
-              data-aos-delay={(i % 3) * 80}
-            >
-              <span className="expertise__num">{String(i + 1).padStart(2, "0")}</span>
-              <h4>{e.title}</h4>
-              <p>{e.text}</p>
-            </div>
-          ))}
+        <div className="focus">
+          <h3 className="focus__title" data-aos="fade-up">
+            What I'm looking for next
+          </h3>
+          <div className="focus__grid">
+            {focus.map((f, i) => (
+              <div className="tile focus__item" key={f.title} data-aos="fade-up" data-aos-delay={i * 100}>
+                <h4>{f.title}</h4>
+                <div className="tags">
+                  {f.items.map((it) => (
+                    <span className="tag" key={it}>
+                      {it}
+                    </span>
+                  ))}
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </section>

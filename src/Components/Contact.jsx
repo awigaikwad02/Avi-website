@@ -2,15 +2,13 @@ import React from "react";
 import {
   FiCalendar,
   FiCheck,
+  FiChevronRight,
   FiCopy,
   FiFileText,
   FiLinkedin,
-  FiMail,
   FiPhone,
 } from "react-icons/fi";
-import { SectionTitle } from "./About";
 import { profile } from "../data";
-import { trackSpotlight } from "../hooks/useInView";
 
 export const Contact = () => {
   const [copied, setCopied] = React.useState(false);
@@ -25,51 +23,48 @@ export const Contact = () => {
     }
   };
 
-  const cards = [
-    { icon: FiLinkedin, label: "LinkedIn", value: "Connect with me", href: profile.linkedin },
-    { icon: FiPhone, label: "Phone", value: profile.phone, href: profile.phoneHref },
-    { icon: FiCalendar, label: "Calendly", value: "Book an intro call", href: profile.calendly },
-    { icon: FiFileText, label: "Resume", value: "View PDF", href: profile.resume },
+  const links = [
+    { icon: FiLinkedin, label: "LinkedIn", href: profile.linkedin },
+    { icon: FiCalendar, label: "Book a call", href: profile.calendly },
+    { icon: FiFileText, label: "Resume", href: profile.resume },
+    { icon: FiPhone, label: profile.phone, href: profile.phoneHref },
   ];
 
   return (
-    <section className="section section--alt" id="contact">
-      <div className="container">
-        <SectionTitle kicker="Contact" title="Let's build something with data" />
-        <div className="contact">
-          <div className="card contact__main spotlight" onMouseMove={trackSpotlight} data-aos="fade-up">
-            <p>
-              Whether it's a role, a project, or just a conversation about
-              analytics and AI, my inbox is open.
-            </p>
-            <div className="contact__email">
-              <a href={`mailto:${profile.email}`} className="btn">
-                <FiMail /> Say hello
-              </a>
-              <button type="button" className="btn btn--ghost" onClick={copyEmail}>
-                {copied ? <FiCheck /> : <FiCopy />}
-                {copied ? "Copied!" : profile.email}
-              </button>
-            </div>
-          </div>
-          <div className="contact__grid">
-            {cards.map(({ icon: Icon, label, value, href }, i) => (
-              <a
-                key={label}
-                href={href}
-                target={href.startsWith("http") ? "_blank" : undefined}
-                rel="noreferrer"
-                className="card contact__card spotlight"
-                onMouseMove={trackSpotlight}
-                data-aos="fade-up"
-                data-aos-delay={i * 80}
-              >
-                <Icon />
-                <span className="contact__label">{label}</span>
-                <span>{value}</span>
-              </a>
-            ))}
-          </div>
+    <section className="section contact" id="contact">
+      <div className="container contact__inner">
+        <span className="section__kicker" data-aos="fade-up">Contact</span>
+        <h2 className="contact__title" data-aos="fade-up">
+          Let's talk growth.
+        </h2>
+        <p className="contact__text" data-aos="fade-up">
+          Open to roles across data & analytics engineering, applied AI,
+          commercial analytics and go-to-market strategy — or just a good
+          conversation.
+        </p>
+        <div className="contact__cta" data-aos="fade-up">
+          <a href={`mailto:${profile.email}`} className="btn btn--large">
+            Email me
+          </a>
+          <button type="button" className="link-arrow" onClick={copyEmail}>
+            {copied ? <FiCheck /> : <FiCopy />}
+            {copied ? "Copied to clipboard" : profile.email}
+          </button>
+        </div>
+        <div className="contact__links" data-aos="fade-up">
+          {links.map(({ icon: Icon, label, href }) => (
+            <a
+              key={label}
+              href={href}
+              target={href.startsWith("http") ? "_blank" : undefined}
+              rel="noreferrer"
+              className="tile contact__link"
+            >
+              <Icon />
+              <span>{label}</span>
+              <FiChevronRight className="contact__chev" />
+            </a>
+          ))}
         </div>
       </div>
     </section>

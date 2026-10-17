@@ -5,6 +5,7 @@ import "./App.css";
 import { Navbar } from "./Components/Navbar";
 import { Hero } from "./Components/Hero";
 import { About } from "./Components/About";
+import { Expertise } from "./Components/Expertise";
 import { Impact } from "./Components/Impact";
 import { Experience } from "./Components/Experience";
 import { Skills } from "./Components/Skills";
@@ -16,10 +17,10 @@ import { prefersReducedMotion } from "./hooks/useInView";
 export default function App() {
   React.useEffect(() => {
     Aos.init({
-      duration: 700,
+      duration: 900,
       once: true,
-      easing: "ease-out-cubic",
-      offset: 60,
+      easing: "ease-out-quart",
+      offset: 40,
       disable: prefersReducedMotion(),
     });
   }, []);
@@ -30,6 +31,7 @@ export default function App() {
       <main>
         <Hero />
         <About />
+        <Expertise />
         <Impact />
         <Experience />
         <Skills />

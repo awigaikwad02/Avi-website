@@ -1,70 +1,70 @@
 import React from "react";
 import Typewriter from "typewriter-effect";
-import { FiArrowDown, FiCalendar, FiLinkedin, FiMail, FiMapPin } from "react-icons/fi";
-import { DataField } from "./DataField";
+import { FiChevronRight, FiMapPin } from "react-icons/fi";
 import { profile } from "../data";
-import profilePic from "../assets/Photo_fw14_056.png";
+import { useScrollProgress } from "../hooks/useScrollProgress";
+import profilePic from "../assets/profile.jpg";
 
-export const Hero = () => (
-  <section className="hero" id="top">
-    <DataField />
-    <div className="container hero__inner">
-      <div className="hero__text">
-        <p className="hero__status" data-aos="fade-up">
-          <span className="pulse" /> {profile.title} · {profile.company}
+export const Hero = () => {
+  // Photo grows to full size as it scrolls into view, Apple product-page style.
+  const [photoRef, p] = useScrollProgress({ start: 1, end: 0.35 });
+
+  return (
+    <section className="hero" id="top">
+      <div className="container hero__inner">
+        <p className="hero__eyebrow" data-aos="fade-up">
+          {profile.name}
         </p>
-        <h1 data-aos="fade-up" data-aos-delay="100">
-          Hi, I'm <span className="gradient-text">{profile.firstName}</span>.
+        <h1 className="hero__title" data-aos="fade-up" data-aos-delay="80">
+          {profile.headline}
         </h1>
-        <div className="hero__type" data-aos="fade-up" data-aos-delay="200">
+        <div className="hero__type" data-aos="fade-up" data-aos-delay="160">
           <Typewriter
             options={{
               strings: profile.roles,
               autoStart: true,
               loop: true,
               deleteSpeed: 30,
-              delay: 50,
+              delay: 55,
             }}
           />
         </div>
-        <p className="hero__tagline" data-aos="fade-up" data-aos-delay="300">
+        <p className="hero__tagline" data-aos="fade-up" data-aos-delay="240">
           {profile.tagline}
         </p>
-        <div className="hero__cta" data-aos="fade-up" data-aos-delay="400">
-          <a href="#experience" className="btn">
-            View my work
+        <div className="hero__cta" data-aos="fade-up" data-aos-delay="320">
+          <a href="#contact" className="btn">
+            Get in touch
           </a>
-          <a
-            href={profile.calendly}
-            target="_blank"
-            rel="noreferrer"
-            className="btn btn--ghost"
-          >
-            <FiCalendar /> Book a call
-          </a>
-        </div>
-        <div className="hero__meta" data-aos="fade-up" data-aos-delay="500">
-          <span>
-            <FiMapPin /> {profile.location}
-          </span>
-          <a href={profile.linkedin} target="_blank" rel="noreferrer" aria-label="LinkedIn">
-            <FiLinkedin />
-          </a>
-          <a href={`mailto:${profile.email}`} aria-label="Email">
-            <FiMail />
+          <a href="#experience" className="link-arrow">
+            See my work <FiChevronRight />
           </a>
         </div>
       </div>
 
-      <div className="hero__photo" data-aos="zoom-in" data-aos-delay="200">
-        <div className="hero__ring" />
-        <img src={profilePic} alt={profile.name} />
-        <div className="hero__chip hero__chip--a">$100M+ pipeline</div>
-        <div className="hero__chip hero__chip--b">10K+ projects</div>
+      <div className="container">
+        <figure
+          className="hero__photo"
+          ref={photoRef}
+          style={{
+            transform: `scale(${0.86 + 0.14 * p})`,
+            borderRadius: `${40 - 12 * p}px`,
+          }}
+        >
+          <img src={profilePic} alt={profile.name} />
+          <figcaption className="hero__badge">
+            <span className="pulse" />
+            <span>
+              <strong>{profile.title}</strong>
+              <br />
+              {profile.company}
+            </span>
+          </figcaption>
+          <span className="hero__loc">
+            <FiMapPin /> {profile.location}
+          </span>
+        </figure>
       </div>
-    </div>
-    <a href="#about" className="hero__scroll" aria-label="Scroll to about">
-      <FiArrowDown />
-    </a>
-  </section>
-);
+    </section>
+  );
+};

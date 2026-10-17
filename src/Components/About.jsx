@@ -1,50 +1,53 @@
 import React from "react";
-import { FiCheckCircle } from "react-icons/fi";
-import { about, lookingFor } from "../data";
+import { about } from "../data";
+import { useScrollProgress } from "../hooks/useScrollProgress";
+
+// Words light up one by one as the statement scrolls through the viewport.
+const ScrollStatement = ({ text }) => {
+  const [ref, p] = useScrollProgress({ start: 0.9, end: 0.25 });
+  const words = text.split(" ");
+  const lit = p * words.length;
+
+  return (
+    <p className="statement" ref={ref}>
+      {words.map((w, i) => (
+        <span
+          key={i}
+          style={{ opacity: Math.min(1, Math.max(0.18, lit - i + 0.18)) }}
+        >
+          {w}{" "}
+        </span>
+      ))}
+    </p>
+  );
+};
 
 export const About = () => (
   <section className="section" id="about">
     <div className="container">
-      <SectionTitle kicker="About" title="Where business strategy meets data & AI" />
+      <SectionTitle kicker="About" title="Where data, AI and commercial strategy meet." />
+      <ScrollStatement text={about.differentiator} />
       <div className="about">
         <div className="about__text" data-aos="fade-up">
           {about.paragraphs.map((p) => (
-            <p key={p.slice(0, 20)}>{p}</p>
+            <p key={p.slice(0, 24)}>{p}</p>
           ))}
-          <div className="about__stats">
-            {about.highlights.map((h) => (
-              <div key={h.label}>
-                <strong>{h.value}</strong>
-                <span>{h.label}</span>
-              </div>
-            ))}
-          </div>
         </div>
-        <div className="card about__strengths" data-aos="fade-up" data-aos-delay="150">
-          <h3>What I bring</h3>
-          <ul>
-            {about.strengths.map((s) => (
-              <li key={s}>
-                <FiCheckCircle /> {s}
-              </li>
-            ))}
-          </ul>
-          <h4>Open to roles in</h4>
-          <div className="tags">
-            {lookingFor.map((r) => (
-              <span className="tag" key={r}>
-                {r}
-              </span>
-            ))}
-          </div>
+        <div className="about__stats" data-aos="fade-up" data-aos-delay="120">
+          {about.highlights.map((h) => (
+            <div key={h.label}>
+              <strong>{h.value}</strong>
+              <span>{h.label}</span>
+            </div>
+          ))}
         </div>
       </div>
     </div>
   </section>
 );
 
-export const SectionTitle = ({ kicker, title }) => (
-  <div className="section__head" data-aos="fade-up">
+export const SectionTitle = ({ kicker, title, center }) => (
+  <div className={`section__head ${center ? "section__head--center" : ""}`} data-aos="fade-up">
     <span className="section__kicker">{kicker}</span>
     <h2>{title}</h2>
   </div>

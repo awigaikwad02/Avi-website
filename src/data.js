@@ -6,15 +6,15 @@ export const profile = {
   title: "Data Analyst II",
   company: "Honeywell Building Technologies",
   location: "Atlanta, GA",
+  headline: "Data & AI, built for growth.",
   roles: [
-    "Data Analyst II @ Honeywell",
+    "Technical Analytics",
+    "Go-to-Market Strategy",
     "Commercial Intelligence",
-    "Power BI & SQL Developer",
-    "Applied AI & Automation",
-    "Analytics Consultant",
+    "AI Automation",
   ],
   tagline:
-    "I turn complex business problems into scalable analytics, automated workflows and AI-driven insight that move commercial outcomes.",
+    "I connect data, AI and technology with commercial strategy — building the systems that help organizations find opportunities, sell smarter and grow.",
   email: "gaikwad.avi@northeastern.edu",
   phone: "+1 857 200 5017",
   phoneHref: "tel:+18572005017",
@@ -26,37 +26,93 @@ export const profile = {
 
 export const about = {
   paragraphs: [
-    "I'm a Data Analyst II at Honeywell Building Technologies in Atlanta with 3+ years of experience across business analytics, commercial intelligence, consulting, data engineering, BI, automation and AI.",
-    "I specialize in translating business requirements into analytics solutions people actually use — from executive Power BI dashboards and standardized KPIs to agentic AI workflows that remove hours of manual research.",
-    "I've worked across building automation, industrial technology, healthcare, retail, consumer products and real estate, and I own the full lifecycle: requirements, data, modeling, visualization, stakeholder buy-in and production.",
+    "I'm a technology-driven analytics and go-to-market professional with 3+ years of experience at the intersection of data, artificial intelligence, business strategy and commercial growth.",
+    "As a Data Analyst II at Honeywell Building Technologies, I build technical solutions and commercial intelligence capabilities that help teams identify market opportunities, optimize sales processes, strengthen partner ecosystems and make data-driven decisions.",
+    "Across Honeywell, KPMG and Thermo Fisher Scientific, I've combined enterprise analytics, AI engineering, business intelligence, consulting and GTM execution — and I'm most interested in how emerging technology and market intelligence can build scalable revenue engines.",
   ],
   highlights: [
     { label: "Years of experience", value: "3+" },
-    { label: "Industries", value: "6" },
+    { label: "Enterprise brands", value: "3" },
     { label: "Based in", value: "Atlanta" },
   ],
-  strengths: [
-    "Hands-on SQL, Python & BI development",
-    "Commercial operations & enterprise sales",
-    "Large datasets & enterprise systems",
-    "Cross-functional work with IT & leadership",
-    "Requirements gathering & storytelling",
-    "Automation & applied AI",
-    "Consulting & strategic problem-solving",
-    "End-to-end ownership of initiatives",
-  ],
+  differentiator:
+    "I bring technical execution and commercial understanding together. I can work with enterprise data, build analytical systems and automate workflows — then translate those capabilities into market planning, sales effectiveness, partner enablement and business performance.",
 };
+
+// The two complementary disciplines the profile is built around.
+export const disciplines = [
+  {
+    id: "tech",
+    eyebrow: "Build",
+    title: "Technical Expertise",
+    text: "Enterprise data platforms, analytics engineering and AI that turn complex data into intelligence.",
+    groups: [
+      {
+        title: "Data Engineering & Analytics",
+        items: [
+          "SQL, Snowflake, SQL Server & enterprise data warehouses",
+          "Python, pandas, NumPy & scikit-learn",
+          "ETL/ELT workflows & data transformation",
+          "Data modeling, metric standardization & quality validation",
+          "Power BI (advanced DAX, Power Query) & Tableau",
+          "Salesforce CRM, SOQL & commercial data integration",
+        ],
+      },
+      {
+        title: "AI & Automation",
+        items: [
+          "Agentic AI workflows for web research & lead enrichment",
+          "LLMs, OpenAI API, LangChain & Ollama",
+          "RAG with FAISS & Chroma vector databases",
+          "Prompt engineering & LoRA fine-tuning",
+          "AI agents & workflow orchestration",
+        ],
+      },
+    ],
+  },
+  {
+    id: "gtm",
+    eyebrow: "Grow",
+    title: "Go-to-Market Strategy",
+    text: "Using those systems to sharpen GTM planning, partner ecosystems and revenue performance in enterprise B2B.",
+    groups: [
+      {
+        title: "GTM Planning & Market Intelligence",
+        items: [
+          "Market & vertical intelligence",
+          "Opportunity identification & prioritization",
+          "Account, project & capital project intelligence",
+          "Competitive research & data-driven sales planning",
+        ],
+      },
+      {
+        title: "Channel Partners & Enablement",
+        items: [
+          "B2B channel ecosystems & partner-led GTM",
+          "Lead qualification & opportunity distribution",
+          "Sales enablement through commercial intelligence",
+        ],
+      },
+      {
+        title: "Revenue Intelligence",
+        items: [
+          "Pipeline visibility, forecasting & commercial KPIs",
+          "AOP variance, revenue & growth analytics",
+          "Margin, pricing & cost optimization",
+        ],
+      },
+    ],
+  },
+];
 
 // `value` is animated from 0; prefix/suffix are rendered around it.
 export const impact = [
-  { value: 100, prefix: "$", suffix: "M+", label: "Sales pipeline", detail: "Executive visibility through Power BI dashboards" },
-  { value: 1, prefix: "$", suffix: "M+", label: "Partner framework", detail: "Salesforce-backed channel lead sharing" },
-  { value: 10000, suffix: "+", label: "Construction projects", detail: "Commercial intelligence & prioritization" },
-  { value: 12, label: "Market verticals", detail: "Standardized metrics & reporting" },
-  { value: 15, suffix: "%", label: "Profitability lift", detail: "Product margin & pricing analysis" },
-  { value: 1, suffix: "M+", label: "Sales records", detail: "Cleaned, transformed & modeled" },
-  { value: 60, suffix: "%", label: "Faster preprocessing", detail: "Streamlined analytics workflows" },
-  { value: 12, label: "Product pairings", detail: "Found via association rules for cross-sell" },
+  { value: 100, prefix: "$", suffix: "M+", label: "Commercial pipeline", detail: "Made visible to executives through Power BI.", size: "wide" },
+  { value: 10000, suffix: "+", label: "Construction projects", detail: "Analyzed to prioritize high-value opportunities.", size: "wide" },
+  { value: 1, prefix: "$", suffix: "M+", label: "Partner framework", detail: "Salesforce-backed channel lead sharing." },
+  { value: 12, label: "Market verticals", detail: "Metrics & definitions standardized." },
+  { value: 15, suffix: "%", label: "Profitability lift", detail: "From margin & pricing analysis." },
+  { value: 60, suffix: "%", label: "Faster preprocessing", detail: "Across 1M+ sales records." },
 ];
 
 export const experience = [
@@ -68,41 +124,15 @@ export const experience = [
     period: "Jan 2025 – Present",
     location: "Atlanta, GA",
     summary:
-      "Commercial analytics, sales intelligence, channel partner enablement, project intelligence and AI-driven automation for Honeywell's building technology businesses.",
-    groups: [
-      {
-        title: "Commercial Analytics & BI",
-        points: [
-          "Build executive Power BI dashboards tracking pipeline, revenue, forecasts and commercial KPIs.",
-          "Advanced DAX for YoY, AOP variance, forecasts and row-level security.",
-          "Give leadership visibility into $100M+ of pipeline across business units.",
-          "Standardize metrics, definitions and data quality across 12 market verticals.",
-        ],
-      },
-      {
-        title: "Channel Partner Enablement",
-        points: [
-          "Architected a $1M+ channel partner lead-sharing framework on new Salesforce infrastructure.",
-          "Partnered with IT, business stakeholders and SMEs to roll it out across the Americas.",
-          "Built processes to identify and route relevant opportunities to partners.",
-        ],
-      },
-      {
-        title: "Project & Market Intelligence",
-        points: [
-          "Lead analytics over 10,000+ active construction projects across the Americas.",
-          "Enrich project records and surface high-priority prospects for regional sales teams.",
-        ],
-      },
-      {
-        title: "AI & Automation",
-        points: [
-          "Develop agentic AI workflows for web scraping, information gathering and lead enrichment.",
-          "Identify processes ripe for GenAI and turn use cases into practical solutions.",
-        ],
-      },
+      "Commercial analytics, GTM intelligence, partner enablement and technical automation for an enterprise building technologies organization.",
+    points: [
+      "Architecting a $1M+ Salesforce-backed channel partner lead-sharing framework for deployment across the Americas.",
+      "Leading project intelligence analytics across 10,000+ active construction projects to surface high-priority commercial opportunities.",
+      "Building executive-facing Power BI dashboards with visibility into a commercial pipeline exceeding $100M.",
+      "Developing AI-powered workflows that automate information discovery and lead enrichment.",
+      "Standardizing metrics and reporting definitions across 12 market verticals.",
     ],
-    tags: ["Power BI", "DAX", "Snowflake", "SQL Server", "Salesforce", "AI Agents"],
+    tags: ["GTM Intelligence", "Salesforce", "Power BI", "Snowflake", "AI Agents"],
   },
   {
     id: "thermo",
@@ -112,41 +142,30 @@ export const experience = [
     period: "Sep 2024 – Dec 2024",
     location: "Boston, MA",
     summary:
-      "Sales analytics, customer behavior analysis, predictive modeling and data-driven marketing.",
-    groups: [
-      {
-        title: "Highlights",
-        points: [
-          "Built an interactive Tableau dashboard giving stakeholders one view of sales performance.",
-          "Used association rule mining to find 12 complementary product pairings for cross-selling.",
-          "Built Python + Alteryx models predicting customers likely to purchase within 30 days.",
-          "Cleaned, transformed and modeled 1M+ sales records, cutting preprocessing time by 60%.",
-        ],
-      },
+      "Customer analytics, product affinity, predictive modeling and commercial decision support.",
+    points: [
+      "Identified 12 complementary product pairings to inform cross-selling strategy.",
+      "Built models identifying customers with a high likelihood of purchasing within 30 days.",
+      "Processed 1M+ sales records and reduced preprocessing time by 60%.",
+      "Developed Tableau dashboards to support business decisions.",
     ],
-    tags: ["Tableau", "Python", "Alteryx", "Predictive Modeling"],
+    tags: ["Python", "Alteryx", "Tableau", "Predictive Modeling"],
   },
   {
     id: "honeywell-intern",
     company: "Honeywell Building Technologies",
-    short: "Honeywell (Intern)",
+    short: "Honeywell Intern",
     role: "Analytics Intern",
     period: "May 2024 – Aug 2024",
     location: "Atlanta, GA",
     summary:
-      "Financial analytics, product profitability, cost optimization and business intelligence.",
-    groups: [
-      {
-        title: "Highlights",
-        points: [
-          "Ran end-to-end product margin analysis using EDW data and Alteryx.",
-          "Identified pricing inefficiencies that contributed to a 15% increase in product profitability.",
-          "Integrated Salesforce data to analyze non-Honeywell product costs and find savings.",
-          "Built reusable reporting views and documented logic, assumptions and refresh processes.",
-        ],
-      },
+      "Commercial profitability, financial analytics and reporting solutions.",
+    points: [
+      "Analyzed product margins and pricing inefficiencies, contributing to a 15% improvement in product profitability.",
+      "Identified cost optimization opportunities through enterprise data analysis.",
+      "Developed reporting assets to support business teams and leadership.",
     ],
-    tags: ["Alteryx", "Salesforce", "EDW", "Financial Analytics"],
+    tags: ["Alteryx", "Salesforce", "EDW", "Pricing"],
   },
   {
     id: "kpmg",
@@ -156,110 +175,120 @@ export const experience = [
     period: "Jun 2022 – Jul 2023",
     location: "India",
     summary:
-      "Business advisory engagements across consumer products, retail, healthcare and real estate.",
-    groups: [
-      {
-        title: "Highlights",
-        points: [
-          "Conducted market research and competitive landscape analysis.",
-          "Supported a healthcare pricing strategy engagement, evaluating performance and proposing improvements.",
-          "Performed financial due diligence for a real estate transaction.",
-          "Prepared findings and recommendations for senior stakeholders.",
-        ],
-      },
+      "Strategic consulting engagements across consumer, retail, healthcare and real estate.",
+    points: [
+      "Conducted market research and competitive analysis to support strategic recommendations.",
+      "Contributed to healthcare pricing strategy and performance analysis.",
+      "Supported financial due diligence for real estate transactions.",
+      "Developed business insights and recommendations for senior stakeholders.",
     ],
-    tags: ["Consulting", "Market Research", "Due Diligence"],
+    tags: ["Strategy", "Market Research", "Due Diligence"],
   },
 ];
 
 // `icon` keys are resolved in Skills.jsx.
 export const skillCategories = [
   {
-    id: "bi",
-    name: "Analytics & BI",
+    id: "data",
+    name: "Data",
     skills: [
-      { name: "Power BI", icon: "powerbi", detail: "Data modeling, Power Query, advanced DAX, RLS, bookmarks, forecasting & variance analysis" },
-      { name: "Tableau", icon: "tableau", detail: "Interactive dashboards, performance reporting & visual analytics" },
-      { name: "Excel", icon: "excel", detail: "Advanced formulas, pivots, VBA, Power Query & reporting automation" },
-      { name: "Alteryx", icon: "alteryx", detail: "Data cleansing, transformation & automated analytical workflows" },
+      { name: "SQL", icon: "sql", detail: "T-SQL, CTEs, window functions" },
+      { name: "Snowflake", icon: "snowflake", detail: "Enterprise analytical datasets" },
+      { name: "SQL Server", icon: "sqlserver", detail: "Reporting datasets" },
+      { name: "ETL / ELT", icon: "etl", detail: "Pipelines & validation" },
+      { name: "Data Modeling", icon: "model", detail: "Metrics & reporting models" },
+      { name: "Salesforce", icon: "salesforce", detail: "CRM data & SOQL" },
     ],
   },
   {
-    id: "data",
-    name: "Data Engineering",
+    id: "bi",
+    name: "BI",
     skills: [
-      { name: "SQL", icon: "sql", detail: "T-SQL, complex joins, CTEs, window functions & analytical queries" },
-      { name: "Snowflake", icon: "snowflake", detail: "Enterprise querying & analytical datasets" },
-      { name: "SQL Server", icon: "sqlserver", detail: "Relational querying & reporting datasets" },
-      { name: "Salesforce", icon: "salesforce", detail: "CRM data, SOQL, sales reporting & process analysis" },
-      { name: "ETL / ELT", icon: "etl", detail: "Extraction, transformation, validation & pipeline design" },
-      { name: "Data Modeling", icon: "model", detail: "Relational structures, reporting models & standardized metrics" },
+      { name: "Power BI", icon: "powerbi", detail: "DAX, Power Query, RLS" },
+      { name: "Tableau", icon: "tableau", detail: "Interactive dashboards" },
+      { name: "Excel", icon: "excel", detail: "VBA & Power Query" },
+      { name: "Alteryx", icon: "alteryx", detail: "Workflow automation" },
     ],
   },
   {
     id: "ml",
-    name: "Programming & ML",
+    name: "Code & ML",
     skills: [
-      { name: "Python", icon: "python", detail: "pandas, NumPy, scikit-learn, openpyxl & analytical automation" },
-      { name: "R", icon: "r", detail: "Statistical programming & data analysis" },
-      { name: "Predictive Analytics", icon: "predict", detail: "Purchase propensity, forecasting & ML workflows" },
-      { name: "Association Rules", icon: "rules", detail: "Product affinity & cross-selling analysis" },
+      { name: "Python", icon: "python", detail: "pandas, NumPy, scikit-learn" },
+      { name: "R", icon: "r", detail: "Statistical analysis" },
+      { name: "Predictive Models", icon: "predict", detail: "Propensity & forecasting" },
+      { name: "Association Rules", icon: "rules", detail: "Product affinity" },
     ],
   },
   {
     id: "ai",
-    name: "GenAI & Agents",
+    name: "AI",
     skills: [
-      { name: "LLMs & OpenAI API", icon: "openai", detail: "Building LLM-powered applications and workflows" },
-      { name: "LangChain", icon: "chain", detail: "Chains, tools and agent orchestration" },
-      { name: "Ollama", icon: "local", detail: "Locally hosted open-source language models" },
-      { name: "RAG", icon: "rag", detail: "Retrieval-augmented generation with FAISS & Chroma vector stores" },
-      { name: "Fine-tuning (LoRA)", icon: "tune", detail: "Parameter-efficient model fine-tuning" },
-      { name: "Agentic Workflows", icon: "agent", detail: "Automated research, web scraping & lead enrichment" },
+      { name: "OpenAI API", icon: "openai", detail: "LLM applications" },
+      { name: "LangChain", icon: "chain", detail: "Chains & agents" },
+      { name: "Ollama", icon: "local", detail: "Local open-source LLMs" },
+      { name: "RAG", icon: "rag", detail: "FAISS & Chroma" },
+      { name: "LoRA", icon: "tune", detail: "Fine-tuning" },
+      { name: "AI Agents", icon: "agent", detail: "Agentic workflows" },
+    ],
+  },
+  {
+    id: "gtm",
+    name: "GTM",
+    skills: [
+      { name: "Market Intelligence", icon: "market", detail: "Vertical & project intel" },
+      { name: "Channel Strategy", icon: "partner", detail: "Partner-led GTM" },
+      { name: "Pipeline Analytics", icon: "predict", detail: "Forecasts & KPIs" },
+      { name: "Pricing & Margin", icon: "pricing", detail: "Profitability analysis" },
+      { name: "Sales Enablement", icon: "target", detail: "Lead qualification" },
     ],
   },
   {
     id: "tools",
     name: "Platforms",
     skills: [
-      { name: "Azure", icon: "azure", detail: "Microsoft cloud platform" },
+      { name: "Azure", icon: "azure", detail: "Cloud" },
       { name: "Git", icon: "git", detail: "Version control" },
-      { name: "Jira", icon: "jira", detail: "Agile project tracking" },
-      { name: "Microsoft 365", icon: "m365", detail: "Productivity & collaboration suite" },
+      { name: "Jira", icon: "jira", detail: "Agile delivery" },
+      { name: "Microsoft 365", icon: "m365", detail: "Collaboration" },
     ],
   },
 ];
 
-export const expertise = [
-  { title: "Commercial & Sales Analytics", text: "Pipelines, opportunity identification, revenue performance, forecasting and KPI reporting." },
-  { title: "Building Technologies", text: "Construction project data, sales opportunities and channel partner ecosystems." },
-  { title: "Channel & Partner Enablement", text: "Lead identification and Salesforce-supported opportunity sharing with external partners." },
-  { title: "Financial & Profitability", text: "Product margins, pricing inefficiencies, cost analysis and profitability improvement." },
-  { title: "Consulting & Strategy", text: "Market research, competitive analysis, due diligence and executive presentations." },
-  { title: "Customer & Marketing", text: "Purchase propensity, product affinity and targeted cross-sell strategies." },
-  { title: "Process Automation", text: "Spotting repetitive work and replacing it with analytics or AI solutions." },
+export const focus = [
+  {
+    title: "Technical & Engineering",
+    items: [
+      "Data & Analytics Engineering",
+      "AI Engineering & Automation",
+      "Enterprise Business Intelligence",
+      "Applied Machine Learning",
+    ],
+  },
+  {
+    title: "GTM & Strategy",
+    items: [
+      "Go-to-Market Strategy & Operations",
+      "Revenue & Sales Strategy",
+      "Commercial Analytics",
+      "Partner & Channel Strategy",
+      "Market Intelligence",
+      "Revenue Operations & GTM Analytics",
+    ],
+  },
 ];
 
 export const education = [
   {
     school: "Northeastern University",
     degree: "M.S. Business Analytics",
-    period: "Graduated Dec 2024",
+    period: "December 2024",
     location: "Boston, MA",
   },
   {
     school: "Sydenham College of Commerce & Economics",
-    degree: "Bachelor of Management Studies, Business Administration",
-    period: "Graduated Apr 2022",
+    degree: "Bachelor of Management Studies",
+    period: "April 2022",
     location: "Mumbai, India",
   },
-];
-
-export const lookingFor = [
-  "Senior Data Analytics",
-  "Business Intelligence",
-  "Commercial Analytics",
-  "Analytics Engineering",
-  "Analytics Consulting",
-  "Applied AI",
 ];

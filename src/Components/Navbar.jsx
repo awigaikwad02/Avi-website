@@ -5,10 +5,10 @@ import { profile } from "../data";
 
 const links = [
   { id: "about", label: "About" },
+  { id: "expertise", label: "Expertise" },
   { id: "impact", label: "Impact" },
   { id: "experience", label: "Experience" },
   { id: "skills", label: "Skills" },
-  { id: "education", label: "Education" },
   { id: "contact", label: "Contact" },
 ];
 
@@ -16,14 +16,12 @@ export const Navbar = () => {
   const [{ themename, toggeltheme }] = React.useContext(ThemeContext);
   const [open, setOpen] = React.useState(false);
   const [active, setActive] = React.useState("");
-  const [scrolled, setScrolled] = React.useState(false);
   const [progress, setProgress] = React.useState(0);
 
   React.useEffect(() => {
     const onScroll = () => {
       const max = document.documentElement.scrollHeight - window.innerHeight;
       setProgress(max > 0 ? window.scrollY / max : 0);
-      setScrolled(window.scrollY > 20);
     };
     onScroll();
     window.addEventListener("scroll", onScroll, { passive: true });
@@ -45,19 +43,18 @@ export const Navbar = () => {
     return () => observer.disconnect();
   }, []);
 
+  React.useEffect(() => {
+    document.body.style.overflow = open ? "hidden" : "";
+  }, [open]);
+
   return (
-    <header className={`nav ${scrolled ? "nav--scrolled" : ""}`}>
-      <div
-        className="nav__progress"
-        style={{ transform: `scaleX(${progress})` }}
-      />
+    <header className={`nav ${open ? "nav--open" : ""}`}>
       <div className="nav__inner container">
         <a href="#top" className="nav__brand" onClick={() => setOpen(false)}>
-          <span className="nav__logo">AG</span>
-          <span className="nav__name">{profile.name}</span>
+          {profile.name}
         </a>
 
-        <nav className={`nav__links ${open ? "nav__links--open" : ""}`}>
+        <nav className="nav__links">
           {links.map(({ id, label }) => (
             <a
               key={id}
@@ -72,7 +69,7 @@ export const Navbar = () => {
             href={profile.resume}
             target="_blank"
             rel="noreferrer"
-            className="btn btn--small"
+            onClick={() => setOpen(false)}
           >
             Resume
           </a>
@@ -98,6 +95,10 @@ export const Navbar = () => {
           </button>
         </div>
       </div>
+      <div
+        className="nav__progress"
+        style={{ transform: `scaleX(${progress})` }}
+      />
     </header>
   );
 };

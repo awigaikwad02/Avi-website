@@ -1,7 +1,7 @@
 import React from "react";
 import { SectionTitle } from "./About";
 import { impact } from "../data";
-import { useInView, prefersReducedMotion, trackSpotlight } from "../hooks/useInView";
+import { useInView, prefersReducedMotion } from "../hooks/useInView";
 
 const format = (n) => n.toLocaleString("en-US");
 
@@ -14,12 +14,12 @@ const Counter = ({ value, start }) => {
       setN(value);
       return undefined;
     }
-    const duration = 1600;
+    const duration = 1800;
     const t0 = performance.now();
     let frame;
     const tick = (t) => {
       const p = Math.min((t - t0) / duration, 1);
-      const eased = 1 - Math.pow(1 - p, 3);
+      const eased = 1 - Math.pow(1 - p, 4);
       setN(Math.round(value * eased));
       if (p < 1) frame = requestAnimationFrame(tick);
     };
@@ -31,27 +31,26 @@ const Counter = ({ value, start }) => {
 };
 
 export const Impact = () => {
-  const [ref, inView] = useInView({ threshold: 0.2 });
+  const [ref, inView] = useInView({ threshold: 0.15 });
 
   return (
-    <section className="section section--alt" id="impact">
+    <section className="section" id="impact">
       <div className="container">
-        <SectionTitle kicker="Impact" title="Results in numbers" />
-        <div className="impact" ref={ref}>
+        <SectionTitle kicker="Impact" title="Results that move the business." />
+        <div className="bento" ref={ref}>
           {impact.map((m, i) => (
             <div
-              className="card impact__item spotlight"
+              className={`tile bento__item ${m.size === "wide" ? "bento__item--wide" : ""}`}
               key={m.label}
-              onMouseMove={trackSpotlight}
               data-aos="fade-up"
               data-aos-delay={(i % 4) * 80}
             >
-              <div className="impact__value">
+              <div className="bento__label">{m.label}</div>
+              <div className="bento__value">
                 {m.prefix}
                 <Counter value={m.value} start={inView} />
                 {m.suffix}
               </div>
-              <div className="impact__label">{m.label}</div>
               <p>{m.detail}</p>
             </div>
           ))}

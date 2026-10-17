@@ -6,7 +6,7 @@ export const Footer = () => {
   const [show, setShow] = React.useState(false);
 
   React.useEffect(() => {
-    const onScroll = () => setShow(window.scrollY > 600);
+    const onScroll = () => setShow(window.scrollY > 800);
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
@@ -14,9 +14,14 @@ export const Footer = () => {
   return (
     <>
       <footer className="footer">
-        <div className="container">
-          © {new Date().getFullYear()} {profile.name} · {profile.title},{" "}
-          {profile.company}
+        <div className="container footer__inner">
+          <span>
+            Copyright © {new Date().getFullYear()} {profile.name}. All rights
+            reserved.
+          </span>
+          <span>
+            {profile.title} · {profile.company} · {profile.location}
+          </span>
         </div>
       </footer>
       <a
