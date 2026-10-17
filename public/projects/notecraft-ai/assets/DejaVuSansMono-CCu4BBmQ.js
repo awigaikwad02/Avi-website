@@ -1,0 +1,1 @@
+var e=new URL(`DejaVuSansMono-BpbqSJXz.ttf`,import.meta.url).href;export{e as default};
