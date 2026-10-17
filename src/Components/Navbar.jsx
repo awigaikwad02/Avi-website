@@ -1,7 +1,6 @@
 import React from "react";
 import { FiMoon, FiSun, FiMenu, FiX } from "react-icons/fi";
 import { ThemeContext } from "../Context/theme";
-import { profile } from "../data";
 
 const links = [
   { id: "about", label: "About" },
@@ -9,20 +8,16 @@ const links = [
   { id: "impact", label: "Impact" },
   { id: "experience", label: "Experience" },
   { id: "skills", label: "Skills" },
-  { id: "contact", label: "Contact" },
 ];
 
 export const Navbar = () => {
   const [{ themename, toggeltheme }] = React.useContext(ThemeContext);
   const [open, setOpen] = React.useState(false);
   const [active, setActive] = React.useState("");
-  const [progress, setProgress] = React.useState(0);
+  const [scrolled, setScrolled] = React.useState(false);
 
   React.useEffect(() => {
-    const onScroll = () => {
-      const max = document.documentElement.scrollHeight - window.innerHeight;
-      setProgress(max > 0 ? window.scrollY / max : 0);
-    };
+    const onScroll = () => setScrolled(window.scrollY > 24);
     onScroll();
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
@@ -36,7 +31,7 @@ export const Navbar = () => {
       },
       { rootMargin: "-45% 0px -50% 0px" }
     );
-    links.forEach(({ id }) => {
+    [...links, { id: "contact" }].forEach(({ id }) => {
       const el = document.getElementById(id);
       if (el) observer.observe(el);
     });
@@ -48,10 +43,10 @@ export const Navbar = () => {
   }, [open]);
 
   return (
-    <header className={`nav ${open ? "nav--open" : ""}`}>
-      <div className="nav__inner container">
+    <header className={`nav ${scrolled ? "nav--scrolled" : ""} ${open ? "nav--open" : ""}`}>
+      <div className="nav__bar">
         <a href="#top" className="nav__brand" onClick={() => setOpen(false)}>
-          {profile.name}
+          <span className="nav__mark">AG</span>
         </a>
 
         <nav className="nav__links">
@@ -65,14 +60,6 @@ export const Navbar = () => {
               {label}
             </a>
           ))}
-          <a
-            href={profile.resume}
-            target="_blank"
-            rel="noreferrer"
-            onClick={() => setOpen(false)}
-          >
-            Resume
-          </a>
         </nav>
 
         <div className="nav__actions">
@@ -84,6 +71,13 @@ export const Navbar = () => {
           >
             {themename === "dark" ? <FiSun /> : <FiMoon />}
           </button>
+          <a
+            href="#contact"
+            className={`btn btn--small nav__cta ${active === "contact" ? "is-active" : ""}`}
+            onClick={() => setOpen(false)}
+          >
+            Get in touch
+          </a>
           <button
             type="button"
             className="icon-btn nav__burger"
@@ -95,10 +89,6 @@ export const Navbar = () => {
           </button>
         </div>
       </div>
-      <div
-        className="nav__progress"
-        style={{ transform: `scaleX(${progress})` }}
-      />
     </header>
   );
 };

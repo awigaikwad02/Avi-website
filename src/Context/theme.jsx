@@ -8,12 +8,9 @@ const getInitialTheme = () => {
     const saved = window.localStorage.getItem("theme");
     if (saved === "light" || saved === "dark") return saved;
   } catch (e) {
-    // storage unavailable; fall through to system preference
+    // storage unavailable; fall back to the default dark theme
   }
-  return window.matchMedia &&
-    window.matchMedia("(prefers-color-scheme: light)").matches
-    ? "light"
-    : "dark";
+  return "dark";
 };
 
 const ThemeProvider = ({ children }) => {

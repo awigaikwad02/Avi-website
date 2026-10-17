@@ -4,7 +4,6 @@ import {
   FiCheck,
   FiChevronRight,
   FiCopy,
-  FiFileText,
   FiLinkedin,
   FiPhone,
 } from "react-icons/fi";
@@ -26,16 +25,17 @@ export const Contact = () => {
   const links = [
     { icon: FiLinkedin, label: "LinkedIn", href: profile.linkedin },
     { icon: FiCalendar, label: "Book a call", href: profile.calendly },
-    { icon: FiFileText, label: "Resume", href: profile.resume },
     { icon: FiPhone, label: profile.phone, href: profile.phoneHref },
   ];
 
   return (
     <section className="section contact" id="contact">
       <div className="container contact__inner">
-        <span className="section__kicker" data-aos="fade-up">Contact</span>
+        <span className="section__kicker" data-aos="fade-up">
+          <span className="mono">07</span> Contact
+        </span>
         <h2 className="contact__title" data-aos="fade-up">
-          Let's talk growth.
+          Let's talk <span className="metal">growth.</span>
         </h2>
         <p className="contact__text" data-aos="fade-up">
           Open to roles across data & analytics engineering, applied AI,

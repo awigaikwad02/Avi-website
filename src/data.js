@@ -19,8 +19,6 @@ export const profile = {
   phone: "+1 857 200 5017",
   phoneHref: "tel:+18572005017",
   linkedin: "https://www.linkedin.com/in/avishkar-gaikwad-/",
-  resume:
-    "https://drive.google.com/file/d/1gte6Iy175_b8LR86H0UsXNOvBCe25bPs/view?usp=sharing",
   calendly: "https://calendly.com/gaikwad-avi/introductory-call",
 };
 
@@ -183,6 +181,34 @@ export const experience = [
       "Developed business insights and recommendations for senior stakeholders.",
     ],
     tags: ["Strategy", "Market Research", "Due Diligence"],
+  },
+  {
+    id: "ifortis",
+    company: "IFortis Corporate",
+    short: "IFortis",
+    role: "Marketing Intern",
+    period: "Jun 2021 – Jul 2021",
+    location: "Remote",
+    summary:
+      "Marketing internship focused on customer engagement and communication.",
+    points: [],
+    tags: ["Customer Service", "Oral Communication"],
+  },
+  {
+    id: "astral",
+    company: "Astral Advertising and Marketing UK Ltd",
+    short: "Astral",
+    role: "Consulting Intern",
+    period: "Sep 2020 – Feb 2021",
+    location: "On-site",
+    summary:
+      "Client-facing consulting internship working alongside the marketing team.",
+    points: [
+      "Worked to understand each client's needs and objectives.",
+      "Partnered with the marketing team to deliver daily progress updates to clients.",
+      "Helped bridge client expectations and the services delivered, strengthening client relationships.",
+    ],
+    tags: ["Customer Service", "Microsoft Excel"],
   },
 ];
 

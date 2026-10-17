@@ -25,7 +25,7 @@ const ScrollStatement = ({ text }) => {
 export const About = () => (
   <section className="section" id="about">
     <div className="container">
-      <SectionTitle kicker="About" title="Where data, AI and commercial strategy meet." />
+      <SectionTitle index="01" kicker="About" title="Where data, AI and commercial strategy meet." />
       <ScrollStatement text={about.differentiator} />
       <div className="about">
         <div className="about__text" data-aos="fade-up">
@@ -46,9 +46,11 @@ export const About = () => (
   </section>
 );
 
-export const SectionTitle = ({ kicker, title, center }) => (
+export const SectionTitle = ({ index, kicker, title, center }) => (
   <div className={`section__head ${center ? "section__head--center" : ""}`} data-aos="fade-up">
-    <span className="section__kicker">{kicker}</span>
+    <span className="section__kicker">
+      <span className="mono">{index}</span> {kicker}
+    </span>
     <h2>{title}</h2>
   </div>
 );

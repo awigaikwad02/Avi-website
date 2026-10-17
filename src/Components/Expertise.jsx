@@ -12,7 +12,7 @@ export const Expertise = () => {
     <section className="section section--alt" id="expertise">
       <div className="container">
         <SectionTitle
-          kicker="Expertise"
+          index="02" kicker="Expertise"
           title="Two disciplines. One focus: growth."
           center
         />

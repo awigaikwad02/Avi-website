@@ -21,9 +21,10 @@ export const Experience = () => {
   return (
     <section className="section section--alt" id="experience">
       <div className="container">
-        <SectionTitle kicker="Experience" title="Honeywell. Thermo Fisher. KPMG." />
+        <SectionTitle index="04" kicker="Experience" title="Where I've made an impact." />
 
-        <div className="segmented exp__tabs" role="tablist" aria-label="Experience" onKeyDown={onKeyDown} data-aos="fade-up">
+        <div className="exp">
+        <div className="exp__tabs" role="tablist" aria-label="Experience" onKeyDown={onKeyDown} data-aos="fade-up">
           {experience.map((e) => (
             <button
               key={e.id}
@@ -34,7 +35,9 @@ export const Experience = () => {
               className={e.id === activeId ? "is-active" : ""}
               onClick={() => setActiveId(e.id)}
             >
-              {e.short}
+              <span className="exp__tab-name">{e.short}</span>
+              <span className="exp__tab-role">{e.role}</span>
+              <span className="mono exp__tab-year">{e.period.match(/\d{4}/)[0]}</span>
             </button>
           ))}
         </div>
@@ -50,6 +53,7 @@ export const Experience = () => {
             </div>
           </div>
           <p className="exp__summary">{job.summary}</p>
+          {job.points.length > 0 && (
           <ul className="exp__points">
             {job.points.map((p, i) => (
               <li key={p} style={{ animationDelay: `${i * 60}ms` }}>
@@ -57,6 +61,7 @@ export const Experience = () => {
               </li>
             ))}
           </ul>
+          )}
           <div className="tags">
             {job.tags.map((t) => (
               <span className="tag" key={t}>
@@ -65,6 +70,7 @@ export const Experience = () => {
             ))}
           </div>
         </article>
+        </div>
       </div>
     </section>
   );

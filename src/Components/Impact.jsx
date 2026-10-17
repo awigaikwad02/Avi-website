@@ -36,7 +36,7 @@ export const Impact = () => {
   return (
     <section className="section" id="impact">
       <div className="container">
-        <SectionTitle kicker="Impact" title="Results that move the business." />
+        <SectionTitle index="03" kicker="Impact" title="Results that move the business." />
         <div className="bento" ref={ref}>
           {impact.map((m, i) => (
             <div
