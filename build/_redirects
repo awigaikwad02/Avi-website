@@ -1,0 +1,4 @@
+# Clean URLs for the embedded demo apps: any sub-path loads the app,
+# while real files (JS, CSS, images, OCR data) are still served directly.
+/projects/buildsignal/*    /projects/buildsignal/index.html    200
+/projects/notecraft-ai/*   /projects/notecraft-ai/index.html   200

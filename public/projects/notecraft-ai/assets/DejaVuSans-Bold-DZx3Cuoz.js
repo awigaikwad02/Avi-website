@@ -1,0 +1,1 @@
+var e=`/projects/notecraft-ai/assets/DejaVuSans-Bold-D3XZ3B4H.ttf`;export{e as default};
