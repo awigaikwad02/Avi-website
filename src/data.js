@@ -324,9 +324,9 @@ export const projects = [
     eyebrow: "Data Center Intelligence",
     tagline: "The U.S. data center buildout, tracked in one place.",
     description:
-      "A live news and project intelligence site for U.S. data centers. It pulls public news every three hours and turns it into a searchable newsroom, a map of curated and detected project sites, and a company tracker, covering new campuses, construction, power deals, land buys and local votes.",
+      "A live news and project intelligence site for U.S. data centers. It pulls public news every hour and turns it into a searchable newsroom, a map of curated and detected project sites, and a company tracker, covering new campuses, construction, power deals, land buys and local votes.",
     features: [
-      "Newsroom of headlines from 500+ outlets, refreshed every three hours",
+      "Newsroom of headlines from 500+ outlets, refreshed every hour",
       "Project Atlas: map of curated and detected data center sites",
       "Company tracker ranked by headline mentions",
       "Live KPIs: weekly headlines, new projects, active states, MW announced",
