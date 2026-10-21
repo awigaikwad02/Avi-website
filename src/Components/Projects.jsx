@@ -19,7 +19,7 @@ export const Projects = () => (
                 <i />
                 <i />
                 <i />
-                <span>{p.demo}</span>
+                <span>{p.demo.replace(/^https?:\/\//, "")}</span>
               </span>
               <img className="project__img project__img--dark" src={img(p.image, "dark")} alt={`${p.name} screenshot`} loading="lazy" width="1280" height="800" />
               <img className="project__img project__img--light" src={img(p.image, "light")} alt="" loading="lazy" width="1280" height="800" />

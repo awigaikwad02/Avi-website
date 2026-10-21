@@ -319,6 +319,26 @@ export const education = [
 // Featured portfolio projects. Live demos are served from public/projects/<slug>/.
 export const projects = [
   {
+    id: "rack-report",
+    name: "The Rack Report",
+    eyebrow: "Data Center Intelligence",
+    tagline: "The U.S. data center buildout, tracked in one place.",
+    description:
+      "A live news and project intelligence site for U.S. data centers. It pulls public news every three hours and turns it into a searchable newsroom, a map of curated and detected project sites, and a company tracker, covering new campuses, construction, power deals, land buys and local votes.",
+    features: [
+      "Newsroom of headlines from 500+ outlets, refreshed every three hours",
+      "Project Atlas: map of curated and detected data center sites",
+      "Company tracker ranked by headline mentions",
+      "Live KPIs: weekly headlines, new projects, active states, MW announced",
+      "Ten-module learning track on power, cooling and GPU infrastructure",
+    ],
+    tech: ["Automated news pipeline", "Project detection", "Interactive mapping", "Data visualization", "GitHub Pages"],
+    badge: "Live product",
+    demo: "https://therackreport.org/",
+    github: null,
+    image: "rackreport",
+  },
+  {
     id: "buildsignal",
     name: "BuildSignal",
     eyebrow: "Construction Intelligence",
