@@ -1,70 +1,44 @@
-# Getting Started with Create React App
+# Avishkar Gaikwad: Personal Website
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+My personal portfolio site. It covers my background in data analytics, the tools I work with, and a set of projects you can try live in the browser.
 
-## Available Scripts
+## Featured projects
 
-In the project directory, you can run:
+**The Rack Report**
+A live news and project tracker for the U.S. data center buildout. Headlines refresh every hour and feed a searchable newsroom, a project map and a company tracker.
+Live: https://therackreport.org (code: [datacenter-watch](https://github.com/awigaikwad02/datacenter-watch))
 
-### `npm start`
+**BuildSignal**
+A construction intelligence dashboard built on 300 real building permits from Chicago and NYC open data. A Python pipeline cleans the records and a scoring model ranks each permit by commercial relevance.
+Demo: served from `/projects/buildsignal/` on the site
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+**NoteCraft AI**
+A study app that turns PDFs and photos of printed pages into structured notes, flashcards and quizzes. PDF reading and OCR run entirely in the browser, with no backend.
+Demo: served from `/projects/notecraft-ai/` on the site
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Built with
 
-### `npm test`
+React, plain CSS, react-icons. The BuildSignal and NoteCraft AI demos are prebuilt apps (React, TypeScript, Vite, Tailwind) placed in `public/projects/`.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Project layout
 
-### `npm run build`
+```
+src/data.js          all site text and project details (edit content here)
+src/Components/      page sections: Hero, About, Experience, Projects, Skills, Contact
+public/projects/     prebuilt demo apps and project screenshots
+public/_redirects    clean URLs for the demo apps
+build/               production build output
+```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Run locally
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+```
+npm install
+npm start
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Production build: `npm run build`
 
-### `npm run eject`
+## Contact
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+LinkedIn: https://www.linkedin.com/in/avishkar-gaikwad-/
